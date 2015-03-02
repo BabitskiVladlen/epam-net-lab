@@ -1,0 +1,6 @@
+#json
+{
+    "name": "Vladlen",
+    "surname": { "surname1": "Babitski", "surname2": "Vladislavovich" },
+    "phones": [ "(+375-17) 313-74-30", "(+375-25) 931-06-59" ]
+}

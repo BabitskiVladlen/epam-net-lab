@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Say</title>
+		<meta http-equiv="Content-Type" content = "text/html; charset = utf-8" />
+		<link rel="stylesheet" href="css/say_main.css">
+	</head>
+	<body>
+		<div id="body-wrapper">
+			<div id="header">
+				<hr />
+				<ul id="header-item-menu">
+					<li><a href="index.rpr">Messages</a></li>
+					<li><a href="#">Profile</a></li>
+					<li><a href="friends.rpr">Friends</a></li>
+					<li><a href="#">Logout</a></li>
+				</ul>
+				<hr />
+			</div>
+			<div id="main">
+				<form class="search">
+					<span>Search by username or email... </span>
+					<input type="text" />
+					<input class="button"type="submit" value="Go" />
+				</form>
+				<ul id="friends">
+
+					<li class="friends-item">
+						<img class="friends-picture" src="images/mary.jpg">
+						<span class="friends-name">Mary Patsina</span>
+						<a class="friends-email" href="#">parysa.m@mail.ru</a>
+						<a class="friends-sendMessage" href="#">Send message</a>
+					</li>
+					<li class="friends-item">
+						<img class="friends-picture" src="images/vladlen.jpg">
+						<span class="friends-name">Vladlen Babitski</span>
+						<a class="friends-email" href="#">babitski.vladlen@gmail.com</a>
+						<a class="friends-sendMessage" href="#">Send message</a>
+					</li>
+
+				</ul>
+			</div>
+			<div id="footer">
+				<hr />
+			    <address><a href = "#" target = "_blank">Babitski Vladlen</a></address>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+Attention: development is continued...
+This project is custom MVC-platform is named "RpR" (Request-Preparation-Response)
+which based on simple social network "Say".
+
+Implemented features:
+
+	- Data Access Layer:
+	Basic repositories -- Users, Roles, Messages, Friends (+ EF)
+	
+	- Business Logic Layer:
+	Corresponding services which extends repositroies logic
+	Security is based on IIdentity and IPrincipal, also
+		it supports default authentication and registration modules, which use
+	ValidatorFactory (BLL/Security/Validators) including
+	PasswordValidator, EmailValidator etc.
+	BLL/Tools: custom image-compressor
+	Wrapper for Http-context for unit-tests
+	Some unit-tests of BLL
+	
+	- RpR ( future MVC =) )
+	AsyncHttpHandler (for .rpr-extension)
+	Custom RequestEngineFactory (dynamic search by all assemblies and types)
+	and MethodInvoker (Action invoker)
+	Custom model-binder (including binding of simple .net-types,
+		binding of complex models and HttpFileCollections)
+	RequestEngine is base abstract class (crude yet) 
+	ResponseEngine (crude yet), but
+	"Response" ("Strategic" [i mean pattern] helper) class already contains logic of handling
+	Json, and GetById method (for server-side!)
+	2 .rpr-pages (RpR/Content) - are usual HTML-files (may view their in web-browser)
+	
+To-do list
+
+	- BLL:
+	/Tools: SMTP-processor for email sending
+	More unit-tests
+		
+	-RpR:
+	http-valid Request-response engines
+	http-modules
+	json content
+	pure js (Ajax and API History for right handling of back-forward buttons in web-browsers)
+	more .rpr-pages
+	more validators
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

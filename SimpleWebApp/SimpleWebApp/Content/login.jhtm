@@ -1,0 +1,18 @@
+<p id="validation"></p>
+<form id="login" name="login" action="login.jhtm" method="post">
+        <div>
+            <h2>Login</h2>
+            <hr />
+        </div>
+        <div>
+            <p>Username</p>
+            <input class="textbox" id="username" name="username" type="text" value="" />
+        </div>
+        <div>
+            <p>Password</p>
+            <input class="textbox" id="password" name="password" type="password" value="" />
+        </div>
+        <div>
+            <input type="submit" value="Login" class="button" id="login_button"/>
+        </div>
+</form>

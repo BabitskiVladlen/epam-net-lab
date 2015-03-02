@@ -1,0 +1,38 @@
+Simple Web Application supports following features:
+
+1) AsyncHandler:
+a) handles .jhtm extension. Files of this extension may contain ordinal html as well as also json
+b) asynchronous writing data about user's web-browser and device to file on a server
+
+2) RequestResult:
+abstract class containing service information such as http-context and requesting page. Also it supports abstract method GetResponse().
+Derivative classes handle requests and return responses with corresponding status codes. These classes use low–level classes DefaultStrategy and Response.  
+
+3) Security API:
+a) login/logoff
+b) current user
+c) creating, reading, deleting of cookies
+d) creating and verification of a password (md5)
+e) http-module, whose methods are hooked up on AuthenticationRequest and EndOfRequest events to authentication problems (using IPrincipal and IIdentity interfaces)
+
+4) JavaScript features:
+a) dynamical changing elements sizes
+b) AJAX (all pages):
+- login form
+- validation
+- home page
+- user's info (JSON)
+- not found page
+
+5) CSS
+all styles, background image (is created from 1px), logotype
+
+Also I used NLog framework for errors handling.
+
+Login: Vladlen
+Password: Vladlen
+(Try to enter invalid data too)
+
+!Video-report about application UI in .zip
+
+P.S. Application has been deployed in IIS

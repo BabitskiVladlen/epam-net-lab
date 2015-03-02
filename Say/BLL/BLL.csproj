@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3CC4221B-C180-48C3-8CA8-56F2F55F79E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DependencyResolution.cs" />
+    <Compile Include="Infrastructure\IFriendshipService.cs" />
+    <Compile Include="Infrastructure\IMessageService.cs" />
+    <Compile Include="Infrastructure\IRoleService.cs" />
+    <Compile Include="Infrastructure\IUserService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Contexts\Cookie.cs" />
+    <Compile Include="Security\Contexts\TestContext.cs" />
+    <Compile Include="Security\Contexts\WebContext.cs" />
+    <Compile Include="Security\DefaultAuthentication.cs" />
+    <Compile Include="Security\Infrastructure\IAuthentication.cs" />
+    <Compile Include="Security\Infrastructure\IContext.cs" />
+    <Compile Include="Security\Infrastructure\IPasswordEngine.cs" />
+    <Compile Include="Security\Infrastructure\IRegistration.cs" />
+    <Compile Include="Security\Infrastructure\IUserIdentity.cs" />
+    <Compile Include="Security\Infrastructure\IValidation.cs" />
+    <Compile Include="Security\Infrastructure\IValidator.cs" />
+    <Compile Include="Security\Infrastructure\IValidatorFactory.cs" />
+    <Compile Include="Security\PasswordEngines\PasswordEngineMD5.cs" />
+    <Compile Include="Security\Principal\UserIdentity.cs" />
+    <Compile Include="Security\Principal\UserProvider.cs" />
+    <Compile Include="Security\DefaultRegistration.cs" />
+    <Compile Include="Security\Validators\NameValidator.cs" />
+    <Compile Include="Security\Validators\Validations\AdminPasswordValidation.cs" />
+    <Compile Include="Security\Validators\AdminPasswordValidator.cs" />
+    <Compile Include="Security\Validators\Validations\BasicValidation.cs" />
+    <Compile Include="Security\Validators\Validations\EmailSymbolsValidation.cs" />
+    <Compile Include="Security\Validators\EmailValidator.cs" />
+    <Compile Include="Security\Validators\Validations\LengthValidation.cs" />
+    <Compile Include="Security\Validators\Validations\NameSymbolsValidation.cs" />
+    <Compile Include="Security\Validators\UsernameValidator.cs" />
+    <Compile Include="Security\Validators\ValidatorFactory.cs" />
+    <Compile Include="Security\Validators\Validations\PasswordLengthValidation.cs" />
+    <Compile Include="Security\Validators\Validations\PasswordSymbolsValidation.cs" />
+    <Compile Include="Security\Validators\PasswordValidator.cs" />
+    <Compile Include="Services\FriendshipService.cs" />
+    <Compile Include="Services\MessageService.cs" />
+    <Compile Include="Services\RoleService.cs" />
+    <Compile Include="Services\UserService.cs" />
+    <Compile Include="Tools\ImageProcessor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{38dd34d7-78d1-482d-8470-6c2662130689}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
