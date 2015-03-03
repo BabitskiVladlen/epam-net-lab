@@ -48,8 +48,8 @@
   <ItemGroup>
     <Compile Include="Contexts\EfDbContext.cs" />
     <Compile Include="Entities\Friendship.cs" />
-    <Compile Include="Entities\Message.cs" />
-    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\MessageEntity.cs" />
+    <Compile Include="Entities\RoleEntity.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Infrastructure\IFriendshipRepository.cs" />
     <Compile Include="Infrastructure\IMessageRepository.cs" />

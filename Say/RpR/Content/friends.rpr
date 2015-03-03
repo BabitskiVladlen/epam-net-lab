@@ -4,7 +4,7 @@
 	<head>
 		<title>Say</title>
 		<meta http-equiv="Content-Type" content = "text/html; charset = utf-8" />
-		<link rel="stylesheet" href="css/say_main.css">
+		<link rel="stylesheet" href="Content/css/say_main.css">
 	</head>
 	<body>
 		<div id="body-wrapper">
@@ -27,13 +27,13 @@
 				<ul id="friends">
 
 					<li class="friends-item">
-						<img class="friends-picture" src="images/mary.jpg">
+						<img class="friends-picture" src="Content/images/mary.jpg">
 						<span class="friends-name">Mary Patsina</span>
 						<a class="friends-email" href="#">parysa.m@mail.ru</a>
 						<a class="friends-sendMessage" href="#">Send message</a>
 					</li>
 					<li class="friends-item">
-						<img class="friends-picture" src="images/vladlen.jpg">
+						<img class="friends-picture" src="Content/images/vladlen.jpg">
 						<span class="friends-name">Vladlen Babitski</span>
 						<a class="friends-email" href="#">babitski.vladlen@gmail.com</a>
 						<a class="friends-sendMessage" href="#">Send message</a>

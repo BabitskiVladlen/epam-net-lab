@@ -10,9 +10,9 @@
 			<div id="header">
 				<hr />
 				<ul id="header-item-menu">
-					<li><a href="index.rpr">Messages</a></li>
+					<li><a href="index.jhtm">Messages</a></li>
 					<li><a href="#">Profile</a></li>
-					<li><a href="friends.rpr">Friends</a></li>
+					<li><a href="friends.jhtm">Friends</a></li>
 					<li><a href="#">Logout</a></li>
 				</ul>
 				<hr />
@@ -21,19 +21,19 @@
 				<ul id="messages">
 					<li class="messages-item">
 						<span class="messages-name">Mary Patsyna</span>
-						<img class="messages-picture" src="images/mary.jpg" />
+						<img class="messages-picture" src="image/mary.jpg" />
 						<a class="messages-last" href="#">Last message from the first user</a>
 					</li>
 
 					<li  class="messages-item">
 						<span class="messages-name">Vladlen Babitski</span>
-						<img class="messages-picture" src="images/vladlen.jpg" />
+						<img class="messages-picture" src="image/vladlen.jpg" />
 						<a class="messages-last" href="#">Hello! How are you?</a>
 					</li>
 
 					<li  class="messages-item">
 						<span class="messages-name">Andy Larkin</span>
-						<img class="messages-picture" src="images/andy.jpg" />
+						<img class="messages-picture" src="image/andy.jpg" />
 						<a class="messages-last" href="#">
 							When will you go at work?
 						</a>

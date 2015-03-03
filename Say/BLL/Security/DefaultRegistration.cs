@@ -60,7 +60,7 @@ namespace BLL.Security
         #endregion
 
         #region AddNewUser
-        public void AddNewUser(User user, out List<string> errors)
+        public bool AddNewUser(User user, out List<string> errors)
         {
             if (_userService.IsExist(user.Username))
                 throw new ArgumentException("User exists already", (Exception)null);
@@ -137,13 +137,11 @@ namespace BLL.Security
             } 
             #endregion
 
-            if (!isValid)
-                throw new ArgumentException("Invalid user's data");
+            if (!isValid) return false;
 
             user.Password = _passwordEngine.Create(user.Password);
-            try { _userService.SaveUser(user); }
-            catch (Exception exc)
-            { throw new Exception("Service error", exc); }
+            _userService.SaveUser(user);
+            return true;
         } 
         #endregion
     }

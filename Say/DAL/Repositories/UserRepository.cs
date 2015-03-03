@@ -47,6 +47,8 @@ namespace DAL.Repositories
                 exUser.Image = user.Image;
                 exUser.CompressedImage = user.CompressedImage;
                 exUser.ImageMimeType = exUser.ImageMimeType;
+                exUser.NewFriends = user.NewFriends;
+                exUser.NewMessages = user.NewMessages;
             }
             _context.SaveChanges();
         } 

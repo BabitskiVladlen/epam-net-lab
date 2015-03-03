@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Say</title>
+		<meta http-equiv="Content-Type" content = "text/html; charset = utf-8" />
+		<link rel="stylesheet" href="Content/css/say_main.css">
+	</head>
+	<body>
+		<div id="body-wrapper">
+			<div id="header">
+				<hr />
+				<ul id="header-item-menu">
+					<li><a href="index.rpr">Messages</a></li>
+					<li><a href="#">Profile</a></li>
+					<li><a href="friends.rpr">Friends</a></li>
+					<li><a href="#">Logout</a></li>
+				</ul>
+				<hr />
+			</div>
+			<div id="main">
+                <p id="validation"></p>
+                <form id="registration" name="registration" action="registration.rpr" method="post">
+                        <div>
+                            <h2>Registration</h2>
+                            <hr />
+                        </div>
+
+                        <div>
+                            <p>First name</p>
+                            <input class="textbox" id="firstname" name="firstname" type="text" value="" />
+                        </div>
+
+                        <div>
+                            <p>Surname</p>
+                            <input class="textbox" id="surname" name="surname" type=""text"" value="" />
+                        </div>
+
+                        <div>
+                            <p>Username</p>
+                            <input class=""textbox"" id=""username"" name=""username"" type=""text"" value="" />
+                        </div>
+
+                        <div>
+                            <p>Password</p>
+                            <input class="textbox" id="password" name="password" type="password" value="" />
+                        </div>
+
+                        <div>
+                            <p>password again</p>
+                            <input class="textbox" id="passwordAgain" name="passwordAgain" type="password" value="" />
+                        </div>
+
+                        <div>
+                            <p>Email</p>
+                            <input class="textbox" id="email" name="email" type="text" value="" />
+                        </div>
+
+                        <div>
+                        <input type="submit" value="Register"" class="button" id="reg_button"/>
+                    </div>
+                </form> 
+			<div id="footer">
+				<hr />
+			    <address><a href = "#" target = "_blank">Babitski Vladlen</a></address>
+			</div>
+		</div>
+	</body>
+</html>

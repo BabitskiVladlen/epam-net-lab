@@ -4,12 +4,14 @@ using System.Web.Security;
 
 namespace BLL.Security
 {
-    internal static class Cookie
+    public static class Cookie
     {
         #region Create
-        public static void Create(string username, string cookieName,
-    HttpContext context, bool isPersistent = true)
+        public static void Create(string username, string cookieName, bool isPersistent = true)
         {
+            HttpContext context = HttpContext.Current;
+            if (context == null)
+                throw new InvalidOperationException("Current http-context is null", (Exception)null);
             if (String.IsNullOrEmpty(username) || String.IsNullOrWhiteSpace(username))
                 throw new ArgumentNullException("Username is null or empty", (Exception)null);
             if (String.IsNullOrEmpty(cookieName) || String.IsNullOrWhiteSpace(cookieName))
@@ -49,8 +51,11 @@ namespace BLL.Security
         #endregion
 
         #region Delete
-        public static void Delete(string cookieName, HttpContext context)
+        public static void Delete(string cookieName)
         {
+            HttpContext context = HttpContext.Current;
+            if (context == null)
+                throw new InvalidOperationException("Current http-context is null", (Exception)null);
             if (context.Request.Cookies[cookieName] != null)
             {
                 HttpCookie newCookie = new HttpCookie(cookieName) { Expires = DateTime.Now.AddDays(-1d) };

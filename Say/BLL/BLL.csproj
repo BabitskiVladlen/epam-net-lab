@@ -83,6 +83,7 @@
     <Compile Include="Services\MessageService.cs" />
     <Compile Include="Services\RoleService.cs" />
     <Compile Include="Services\UserService.cs" />
+    <Compile Include="Tools\EmailProcessor.cs" />
     <Compile Include="Tools\ImageProcessor.cs" />
   </ItemGroup>
   <ItemGroup>

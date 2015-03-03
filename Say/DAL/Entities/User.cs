@@ -13,6 +13,8 @@
         public byte[] Image { get; set; }
         public byte[] CompressedImage { get; set; }
         public string ImageMimeType { get; set; }
+        public int NewFriends { get; set; }
+        public int NewMessages { get; set; }
 
     }
 }

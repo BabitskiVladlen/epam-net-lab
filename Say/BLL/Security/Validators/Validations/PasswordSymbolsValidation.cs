@@ -6,11 +6,12 @@ namespace BLL.Security.Validators
 {
     public class PasswordSymbolsValidation : IValidation
     {
+        #region IsValid
         public bool IsValid(string password, out List<string> errors)
         {
             bool isValid = true;
             errors = new List<string>();
-            BasicValidation def = new BasicValidation();
+            BasicValidation def = new BasicValidation() { Selector = "Password" };
             if (!def.IsValid(password, out errors))
                 return false;
 
@@ -32,6 +33,7 @@ namespace BLL.Security.Validators
                 isValid = false;
             }
             return isValid;
-        }
+        } 
+        #endregion
     }
 }

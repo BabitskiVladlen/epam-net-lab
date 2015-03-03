@@ -5,12 +5,14 @@ namespace BLL.Security.Validators
 {
     public class EmailValidator : IValidator
     {
+        #region GetValidations
         public IEnumerable<IValidation> GetValidations()
         {
             List<IValidation> validators = new List<IValidation>();
-            validators.Add(new LengthValidation() { Selector = "email" });
+            validators.Add(new LengthValidation() { Selector = "Email" });
             validators.Add(new EmailSymbolsValidation());
             return validators;
-        }
+        } 
+        #endregion
     }
 }

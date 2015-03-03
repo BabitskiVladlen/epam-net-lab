@@ -1,16 +1,18 @@
-﻿using System;
+﻿using RpR.ResponseEngines.Infrastructure;
+using System;
+using System.Security.Principal;
 using System.Web;
 
 namespace RpR.RequestEngines.Infrastructure
 {
-    public abstract class RequestEngine
+    public class RequestEngine
     {
-        private readonly string _requestTarget;
-        private readonly string _baseDirectory;
+        #region Fields&Props
         private readonly HttpContext _context;
-        public string RequestTarget { get { return _requestTarget;  } }
-        public string BaseDirectory { get { return _baseDirectory; } }
         public HttpContext HttpContext { get { return _context; } }
+        public IPrincipal CurrentUser { get { return _context.User; } }
+        public bool IsAuthenticated { get { return _context.User.Identity.IsAuthenticated; } } 
+        #endregion
 
         #region .ctor
         public RequestEngine()
@@ -18,13 +20,24 @@ namespace RpR.RequestEngines.Infrastructure
             _context = HttpContext.Current;
             if (_context == null)
                 throw new InvalidOperationException("Current http-context is null", (Exception)null);
-            _baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            _context.Response.ContentType = "text/html";
-            _requestTarget = _context.Request.Url.AbsolutePath
-                .Substring(_context.Request.Url.AbsolutePath.LastIndexOf("/") + 1);
-        } 
+        }
         #endregion
 
-        public abstract void GetResponse();
+        #region IsInRole
+        public bool IsInRole(string role)
+        {
+            if (_context.User != null)
+                return _context.User.IsInRole(role);
+            return false;
+        }
+        #endregion
+
+        #region GetDefault
+        public void GetDefault()
+        {
+            ResponseEngine responseEngine = new ResponseEngine();
+            responseEngine.GetDefaultResponse();
+        } 
+        #endregion
     }
 }

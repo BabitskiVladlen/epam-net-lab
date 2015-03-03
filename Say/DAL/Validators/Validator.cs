@@ -43,6 +43,10 @@ namespace DAL.Validators
                 throw new ArgumentException("Email is null or empty", (Exception)null);
             if (user.Email.Length > 50)
                 throw new ArgumentException("Email must be less then 50 characters", (Exception)null);
+            if (user.NewMessages < 0)
+                throw new ArgumentException("Count of new messages < 0", (Exception)null);
+            if (user.NewFriends < 0)
+                throw new ArgumentException("Count of new friends < 0", (Exception)null);
             if (_roleRepository.GetRoleByID(user.Role) == null)
                 throw new ArgumentException("Invalid role", (Exception)null);
         }

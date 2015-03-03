@@ -10,6 +10,8 @@ namespace BLL.Infrastructure
         void SaveMessage(MessageEntity message);
         void DeleteMessage(int messageID);
         void DisableMessage(int messageID);
-        IEnumerable<MessageEntity> GetAllUserMessages(int FromUser, int ToUser);
+        void EnableMessage(int messageID);
+        IEnumerable<MessageEntity> GetAllUserMessages(int userID);
+        IEnumerable<MessageEntity> GetAllUserMessages(int User1, int User2);
     }
 }

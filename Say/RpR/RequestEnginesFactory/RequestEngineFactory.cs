@@ -2,8 +2,10 @@
 using RpR.Infrastructure;
 using RpR.RequestEngines.Infrastructure;
 using System;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
+using System.Web;
 
 namespace RpR.RequestEngineFactories
 {
@@ -28,37 +30,40 @@ namespace RpR.RequestEngineFactories
         #region CreateEngine
         public void CreateEngine(string target)
         {
-            if (IsNull(target)) return;
             int i = target.IndexOf(".rpr");
             if ((i == -1) || (i == 0))
             {
-                LogMessage.Add("Request: " + target, Level.Error);
+                LogMessage.Add("Bad requested target: " + target, Level.Error);
                 // not found
                 return;
             }
             string engineName = target.Substring(0, i);
             engineName += "requestengine";
 
-            Type necessaryType = null;
-            Assembly[] cuurentAssemblies = AppDomain.CurrentDomain.GetAssemblies();
-            foreach (var a in cuurentAssemblies)
+            Assembly[] curentAssemblies = AppDomain.CurrentDomain.GetAssemblies();
+            var types = curentAssemblies.SelectMany(c => c.GetTypes());
+            Type necessaryType = types.FirstOrDefault(t =>
+                (String.Equals(t.Name, engineName, StringComparison.InvariantCultureIgnoreCase) &&
+                        t.IsSubclassOf(typeof(RequestEngine))));
+            if (necessaryType == null)
+            try
             {
-                Type[] types = a.GetTypes();
-                foreach (Type t in types)
-                {
-                    if (String.Equals(t.Name, engineName, StringComparison.InvariantCultureIgnoreCase) &&
-                        t.IsAssignableFrom(typeof(RequestEngine)))
-                    {
-                        necessaryType = t;
-                        break;
-                    }
-                    if (necessaryType != null) break;
-                }
+                new RequestEngine().GetDefault();
             }
-            if (IsNull(necessaryType)) return;
+            catch (Exception exc)
+            {
+                LogMessage.Add(exc, Level.Error);
+                HttpContext.Current.Response.Write("Not Fround =)"); // add not found
+                return;
+            }
 
             var ctor = necessaryType.GetConstructors().FirstOrDefault(c => c.GetParameters().Length == 0);
-            if (IsNull(ctor)) return;
+            if (ctor == null)
+            {
+                LogMessage.Add("Constructor without parameters of " +
+                    engineName.ToUpper(CultureInfo.InvariantCulture) + " is null", Level.Error);
+                // not found
+            }
 
             object instance = ctor.Invoke(null);
             try
@@ -70,19 +75,6 @@ namespace RpR.RequestEngineFactories
                 LogMessage.Add(exc, Level.Error);
                 // error to client
             }
-        } 
-        #endregion
-
-        #region IsNull
-        private bool IsNull(object obj)
-        {
-            if (obj == null)
-            {
-                LogMessage.Add(obj.ToString() + "is null", Level.Error);
-                // not found
-                return true;
-            }
-            return false;
         } 
         #endregion
     }

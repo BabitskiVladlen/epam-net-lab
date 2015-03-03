@@ -43,8 +43,10 @@ namespace BLL.Security
         #endregion
     }
 
+    #region UserData
     public static class UserData
     {
         public static string Data { get; set; }
-    }
+    } 
+    #endregion
 }

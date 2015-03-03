@@ -5,6 +5,6 @@ namespace BLL.Security.Infrastructure
 {
     public interface IRegistration
     {
-        void AddNewUser(User user, out List<string> errors);
+        bool AddNewUser(User user, out List<string> errors);
     }
 }

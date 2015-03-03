@@ -6,7 +6,6 @@
         IValidator AdminPasswordValidator { get; }
         IValidator UsernameValidator { get; }
         IValidator NameValidator { get; }
-        IValidator EmailValidator { get; }
-        
+        IValidator EmailValidator { get; }      
     }
 }

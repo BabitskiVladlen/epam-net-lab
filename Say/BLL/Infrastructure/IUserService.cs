@@ -11,6 +11,7 @@ namespace BLL.Infrastructure
         void SaveUser(User user);
         void DeleteUser(int userID);
         void DisableUser(int userID);
+        void EnableUser(int userID);
         bool IsInRole(int userID, string role);
     }
 }

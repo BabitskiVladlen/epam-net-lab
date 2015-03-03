@@ -43,22 +43,15 @@ namespace RpR.ActionInvokers
                 .FirstOrDefault(m => String.Equals(m.Name, httpMethod, StringComparison.InvariantCultureIgnoreCase));
             if (method == null)
                 throw new MethodAccessException
-                    (httpMethod + " method doesn't exist in this request engine", (Exception)null);
+                    (httpMethod + " method doesn't exist in " + engine.GetType().Name, (Exception)null);
 
             var parameters = method.GetParameters();
             NameValueCollection qsCollettion = new NameValueCollection();
             if (httpMethod == "GET") qsCollettion = HttpContext.Current.Request.QueryString;
             else qsCollettion = HttpContext.Current.Request.Form;
 
-            try
-            {
-                object[] paramsValues = _binder.BindModel(parameters, qsCollettion);
-                method.Invoke(engine, paramsValues);
-            }
-            catch (Exception exc)
-            {
-                throw new Exception("Action exception", exc);
-            }
+            object[] paramsValues = _binder.BindModel(parameters, qsCollettion);
+            method.Invoke(engine, paramsValues);
         } 
         #endregion
     }

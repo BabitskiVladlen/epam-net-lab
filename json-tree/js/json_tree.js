@@ -8,7 +8,7 @@ JsonTree.start =
 		if (JsonTree.json == null) return;
 		var node = document.getElementById("node0");
 		var body  = node.getElementsByClassName("node-body")[0];
-		JsonTree.get(JsonTree.json, 1, body);
+		JsonTree.get(JsonTree.json, body);
 		JsonTree.show();
 	}
 
@@ -55,103 +55,109 @@ JsonTree.hideElement =
 	}
 
 JsonTree.get =
-	function(obj, lvl, parentNode)
+	function(obj, parentNode)
 	{
 		if (obj == null || typeof obj == "undefined") return;
 		var i = 0;
 		for (var prop in obj)
 		{
-			// node
-			var node = document.createElement("div");
-			node.className = "node";
-			node.style.paddingLeft = 15 * lvl + "px";
-			node.onclick =  function(e) { JsonTree.show(); e.stopPropagation(); }
-			parentNode.appendChild(node);
-
-				// head
-				var head = document.createElement("h2");
-				head.className = "node-head";
-				node.appendChild(head);
-
-				// prepare head
-				JsonTree.prepareHead(head, prop);
-
-				// body
-				var body = document.createElement("div");
-				body.className = "node-body";
-				node.appendChild(body);
-
+			var body = JsonTree.prepareNode(parentNode, prop);
 			var p = obj[prop];
 
 			// []
 			if (p instanceof Array)
 			{
-				var val = document.createElement("div");
-				val.className = "val";
-				val.style.paddingLeft = 20 * lvl + "px";
+				
 				for (var i = 0; i < p.length; ++i)
 				{
-					val.innerHTML += p[i];
-				    if (i != p.length - 1) val.innerHTML += ", ";
-				}
-				body.appendChild(val);
+					if (typeof p[i] == "object")
+					{
+						JsonTree.get(p[i], JsonTree.prepareNode(body, "{ }"));
+					}
+					else
+						body.appendChild(JsonTree.prepareValue(p[i]));	
+				}	
 			}
 
 			// { }
 			else if (typeof p == "object")
-				JsonTree.get(p, lvl + 1, body);
+				JsonTree.get(p, body);
 
 			// value
 			else
-			{
-				var val = document.createElement("div");
-				val.className = "val";
-				val.style.paddingLeft = 20 * lvl + "px";
-				val.innerHTML = p;
-				body.appendChild(val);
-			}
+				body.appendChild(JsonTree.prepareValue(p));
 		}
 	}
 
 JsonTree.validate =
-function()
-{	
-	var jsonText = document.getElementById("json-text").value;
+	function()
+	{	
+		var jsonText = document.getElementById("json-text").value;
 
-	// get node and body
-	var node = document.getElementById("node0");
-	node.onclick = function(e) { JsonTree.start(); e.stopPropagation(); };
-	var body  = node.getElementsByClassName("node-body")[0];
-	body.innerHTML = "";
+		// get node and body
+		var node = document.getElementById("node0");
+		node.onclick = function(e) { JsonTree.start(); e.stopPropagation(); };
+		var body  = node.getElementsByClassName("node-body")[0];
+		body.innerHTML = "";
 
-		// head
-		var oldHead = node.getElementsByClassName("node-head")[0];
-		node.removeChild(oldHead);
-		var head = document.createElement("h2");
-		head.className = "node-head";
-		node.insertBefore(head, body);
+			// head
+			var oldHead = node.getElementsByClassName("node-head")[0];
+			node.removeChild(oldHead);
+			var head = document.createElement("h2");
+			head.className = "node-head";
+			node.insertBefore(head, body);
 
-	try
+		try
+		{
+			JsonTree.json = JSON.parse(jsonText);
+		}
+		catch (e)
+		{ 
+			head.style.color = "red";
+			head.innerHTML = "Error";
+			return;
+		}
+			// prepare head
+			JsonTree.prepareHead(head, "{ }");
+	}
+
+JsonTree.prepareNode =
+	function(parentNode, headValue)
 	{
-		JsonTree.json = JSON.parse(jsonText);
+		// node
+		var node = document.createElement("div");
+		node.className = "node";
+		node.onclick =  function(e) { JsonTree.show(); e.stopPropagation(); }
+		parentNode.appendChild(node);
+
+		//head
+			var head = document.createElement("h2");
+			head.className = "node-head";
+			node.appendChild(head);
+			JsonTree.prepareHead(head, headValue);
+
+		// body
+			var body = document.createElement("div");
+			body.className = "node-body";
+			node.appendChild(body);
+			return body;
 	}
-	catch (e)
-	{ 
-		head.style.color = "red";
-		head.innerHTML = "Error";
-		return;
-	}
-		// prepare head
-		JsonTree.prepareHead(head, "{ }");
-}
 
 JsonTree.prepareHead =
-function(head, innerText)
-{
-	var sign = document.createElement("span");
-	sign.className = "sign";
-	sign.innerHTML = " + ";
-	head.appendChild(sign);
-	head.innerHTML += innerText;
-}
+	function(head, innerText)
+	{
+		var sign = document.createElement("span");
+		sign.className = "sign";
+		sign.innerHTML = " + ";
+		head.appendChild(sign);
+		head.innerHTML += innerText;
+	}
 
+JsonTree.prepareValue =
+	function(innerValue)
+	{
+		var val = document.createElement("div");
+		val.className = "val";
+		val.innerHTML = innerValue;
+		return val;
+	}

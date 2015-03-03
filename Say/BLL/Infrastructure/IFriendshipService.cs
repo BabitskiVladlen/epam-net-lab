@@ -8,7 +8,8 @@ namespace BLL.Infrastructure
         IEnumerable<Friendship> Friendships { get; }
         Friendship GetFriendshipByID(int friendshipID);
         void SaveFriendship(Friendship friendship);
+        void AcceptFriendship(int friendshipID);
         void BreakFriendship(int friendshipID);
-        IEnumerable<int> GetAllUserFriends(int userID);
+        IEnumerable<User> GetAllUserFriends(int userID);
     }
 }

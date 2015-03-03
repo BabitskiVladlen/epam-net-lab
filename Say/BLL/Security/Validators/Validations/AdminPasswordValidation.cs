@@ -6,10 +6,11 @@ namespace BLL.Security.Validators
     public class AdminPasswordValidation : IValidation
     {
         private const string _secretLetter = "V";
+        #region IsValid
         public bool IsValid(string password, out List<string> errors)
         {
             errors = new List<string>();
-            BasicValidation def = new BasicValidation();
+            BasicValidation def = new BasicValidation() { Selector = "Password" };
             if (!def.IsValid(password, out errors))
                 return false;
 
@@ -19,6 +20,7 @@ namespace BLL.Security.Validators
                 return false;
             }
             return true;
-        }
+        } 
+        #endregion
     }
 }

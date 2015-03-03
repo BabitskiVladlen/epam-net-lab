@@ -39,6 +39,8 @@ namespace DAL.Repositories
             {
                 exMessage.Message = message.Message;
                 exMessage.IsDeleted = message.IsDeleted;
+                exMessage.IsNew = message.IsNew;
+                exMessage.MessageTime = message.MessageTime;
             }
             _context.SaveChanges();
         } 

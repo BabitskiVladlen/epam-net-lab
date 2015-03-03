@@ -1,11 +1,12 @@
 ﻿using BLL.Security.Infrastructure;
 using System;
 using System.Security.Principal;
+using System.Threading;
 using System.Web;
 
 namespace BLL.Security
 {
-    class WebContext : IContext
+    public class WebContext : IContext
     {
         private readonly HttpContext _httpContext;
         private readonly string _cookieName;
@@ -30,6 +31,7 @@ namespace BLL.Security
             set
             {
                 _httpContext.User = value;
+                Thread.CurrentPrincipal = value;
             }
         } 
         #endregion
@@ -46,14 +48,14 @@ namespace BLL.Security
         #region SetUserData
         public void SetUserData(string data)
         {
-            Cookie.Create(data, _cookieName, _httpContext);
+            Cookie.Create(data, _cookieName);
         }
         #endregion
 
         #region DeleteUserData
         public void DeleteUserData()
         {
-            Cookie.Delete(_cookieName, _httpContext);
+            Cookie.Delete(_cookieName);
         } 
         #endregion
     }

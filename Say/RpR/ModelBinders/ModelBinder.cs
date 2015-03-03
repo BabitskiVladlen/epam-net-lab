@@ -27,21 +27,26 @@ namespace RpR.ModelBinders
                 throw new ArgumentNullException("Array of parameters is null", (Exception)null);
             if (parameters.Length == 0) return null;
 
+            #region InitParamsValues
             object[] paramValues = new object[parameters.Length];
             for (int i = 0; i < parameters.Length; ++i)
             {
                 try
                 {
+                    HttpFileCollection fileColl = _currentContext.Request.Files;
                     if (parameters[i].ParameterType == typeof(string))
                         paramValues[i] = Activator.CreateInstance(parameters[i].ParameterType, String.Empty.ToCharArray());
                     else if ((parameters[i].ParameterType.IsAssignableFrom(typeof(HttpPostedFileBase))))
-                        paramValues[i] =
-                            Activator.CreateInstance(parameters[i].ParameterType,
-                                new[] { new HttpPostedFileWrapper(_currentContext.Request.Files[0]) });
+                    {
+                        if (fileColl != null && fileColl.Count > 0)
+                            paramValues[i] = Activator.CreateInstance(parameters[i].ParameterType,
+                                new[] { new HttpPostedFileWrapper(fileColl[0]) });
+                        else paramValues[i] = (HttpPostedFileBase)null;
+                    }
                     else if ((parameters[i].ParameterType.IsAssignableFrom(typeof(HttpFileCollection))))
                         paramValues[i] =
                             Activator.CreateInstance(parameters[i].ParameterType,
-                                new[] { _currentContext.Request.Files });
+                                new[] { fileColl });
                     else paramValues[i] = Activator.CreateInstance(parameters[i].ParameterType);
                 }
                 catch (Exception exc)
@@ -49,12 +54,14 @@ namespace RpR.ModelBinders
                     throw new InvalidOperationException("Model definition or http-request error", exc);
                 }
             }
-            if ((httpCollection == null) || (paramValues.Length == 0)) return paramValues;
+            if ((httpCollection == null) || (paramValues.Length == 0)) return paramValues; 
+            #endregion
 
+            #region Binding
             TypeConverter converter;
             for (int i = 0; i < parameters.Length; ++i)
             {
-                if (paramValues[i] is  HttpPostedFileBase ||
+                if (paramValues[i] == null || paramValues[i] is HttpPostedFileBase || // !!!
                     paramValues[i] is HttpFileCollection) continue;
 
                 foreach (string key in httpCollection.Keys)
@@ -72,7 +79,9 @@ namespace RpR.ModelBinders
                     else
                         TryPropertyBinder(paramValues[i], key, httpCollection[key]);
                 }
-            }
+            } 
+            #endregion
+
             return paramValues;
         } 
         #endregion
