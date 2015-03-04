@@ -1,18 +1,18 @@
 ﻿using BLL.Infrastructure;
 using System.Security.Principal;
 
-namespace BLL.Security
+namespace BLL.Security.Principal
 {
-    internal class UserProvider : IPrincipal
+    public class DefaultPrincipal : IPrincipal
     {
-        private readonly UserIndentity _userIdentity;
+        private readonly DefaultIndentity _userIdentity;
         private readonly IUserService _userService;
 
-        #region .ctor
-        public UserProvider(IUserService userService, string id)
+        #region .ctors
+        public DefaultPrincipal(IUserService userService, string id)
         {
             _userService = userService;
-            _userIdentity = new UserIndentity(userService, id);
+            _userIdentity = new DefaultIndentity(userService, id);
         } 
         #endregion
 
@@ -26,9 +26,9 @@ namespace BLL.Security
         #region IsInRole
         public bool IsInRole(string role)
         {
-            if (_userService == null) return false;
             return
-                _userService.IsInRole(_userIdentity.User.UserID, role);
+                _userService != null ?
+                _userService.IsInRole(_userIdentity.User.UserID, role) : false;
         } 
         #endregion
 

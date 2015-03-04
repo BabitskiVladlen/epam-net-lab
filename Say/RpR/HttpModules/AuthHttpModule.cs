@@ -1,17 +1,24 @@
-﻿using BLL.Security;
+﻿#region using
+using BLL.Security;
+using BLL.Security.Contexts;
 using BLL.Security.Infrastructure;
-using Ninject;
 using System;
 using System.Threading;
-using System.Web;
+using System.Web; 
+#endregion
 
 namespace RpR.HttpModules
 {
     public class AuthHttpModule : IHttpModule
     {
+        private HttpContext _httpContext;
+        private IAppContext _appContext;
+
         #region Init
         public void Init(HttpApplication context)
         {
+            _httpContext = HttpContext.Current;
+            _appContext = new WebContext();
             context.AuthenticateRequest += Authenticate;
             context.EndRequest += EndRequestHandler;
         } 
@@ -20,24 +27,17 @@ namespace RpR.HttpModules
         #region Authenticate
         private void Authenticate(object source, EventArgs e)
         {
-            IAuthentication authentication =
-                DependencyResolution.Kernel.Get<IAuthentication>();
-            HttpContext.Current.User = authentication.CurrentUser;
-            Thread.CurrentPrincipal = authentication.CurrentUser;
+            _httpContext.User = _appContext.User;
+            Thread.CurrentPrincipal = _appContext.User;
         } 
         #endregion
 
         #region EndRequestHandler
         private void EndRequestHandler(object source, EventArgs e)
         {
-            IAuthentication authentication =
-                DependencyResolution.Kernel.Get<IAuthentication>();
-            HttpContext context = HttpContext.Current;
-            if (context.User.Identity.IsAuthenticated)
-                Cookie.Create(context.User.Identity.Name, "say_rpr_cookie");
-            authentication.CurrentUser = null;
-            HttpContext.Current.User = null;
-            Thread.CurrentPrincipal = null;
+            if (_httpContext.User.Identity.IsAuthenticated)
+                Cookie.Create(_httpContext.User.Identity.Name, "say_rpr_cookie");
+            _appContext.User = _httpContext.User = Thread.CurrentPrincipal = null;
         } 
         #endregion
 

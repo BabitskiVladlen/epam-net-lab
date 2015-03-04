@@ -1,10 +1,12 @@
-﻿using BLL.Infrastructure;
+﻿#region using
+using BLL.Infrastructure;
 using DAL.Entities;
 using DAL.Infrastructure;
 using Ninject;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Linq; 
+#endregion
 
 namespace BLL.Services
 {

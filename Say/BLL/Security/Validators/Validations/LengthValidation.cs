@@ -8,14 +8,14 @@ namespace BLL.Security.Validators
         public string Selector { get; set; }
 
         #region IsValid
-        public bool IsValid(string str, out List<string> errors)
+        public bool IsValid(string str, List<string> errors)
         {
             bool isValid = true;
-            errors = new List<string>();
+            if (errors == null) errors = new List<string>();
             BasicValidation def = new BasicValidation();
             def.Selector = this.Selector;
 
-            if (!def.IsValid(str, out errors))
+            if (!def.IsValid(str, errors))
                 return false;
             if (str.Length > 50)
             {

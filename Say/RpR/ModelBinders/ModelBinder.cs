@@ -1,9 +1,11 @@
-﻿using RpR.Infrastructure;
+﻿#region using
+using RpR.Infrastructure;
 using System;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Reflection;
-using System.Web;
+using System.Web; 
+#endregion
 
 namespace RpR.ModelBinders
 {
@@ -31,8 +33,6 @@ namespace RpR.ModelBinders
             object[] paramValues = new object[parameters.Length];
             for (int i = 0; i < parameters.Length; ++i)
             {
-                try
-                {
                     HttpFileCollection fileColl = _currentContext.Request.Files;
                     if (parameters[i].ParameterType == typeof(string))
                         paramValues[i] = Activator.CreateInstance(parameters[i].ParameterType, String.Empty.ToCharArray());
@@ -41,27 +41,28 @@ namespace RpR.ModelBinders
                         if (fileColl != null && fileColl.Count > 0)
                             paramValues[i] = Activator.CreateInstance(parameters[i].ParameterType,
                                 new[] { new HttpPostedFileWrapper(fileColl[0]) });
-                        else paramValues[i] = (HttpPostedFileBase)null;
+                        else paramValues[i] = null;
                     }
                     else if ((parameters[i].ParameterType.IsAssignableFrom(typeof(HttpFileCollection))))
-                        paramValues[i] =
-                            Activator.CreateInstance(parameters[i].ParameterType,
-                                new[] { fileColl });
-                    else paramValues[i] = Activator.CreateInstance(parameters[i].ParameterType);
-                }
-                catch (Exception exc)
-                {
-                    throw new InvalidOperationException("Model definition or http-request error", exc);
-                }
+                        paramValues[i] = fileColl;
+                    else
+                        try
+                        {
+                            paramValues[i] = Activator.CreateInstance(parameters[i].ParameterType);
+                        }
+                        catch
+                        {
+                            paramValues[i] = null;
+                        }
             }
-            if ((httpCollection == null) || (paramValues.Length == 0)) return paramValues; 
+            if ((httpCollection == null) || (httpCollection.Count == 0)) return paramValues; 
             #endregion
 
             #region Binding
             TypeConverter converter;
             for (int i = 0; i < parameters.Length; ++i)
             {
-                if (paramValues[i] == null || paramValues[i] is HttpPostedFileBase || // !!!
+                if (paramValues[i] == null || paramValues[i] is HttpPostedFileBase ||
                     paramValues[i] is HttpFileCollection) continue;
 
                 foreach (string key in httpCollection.Keys)

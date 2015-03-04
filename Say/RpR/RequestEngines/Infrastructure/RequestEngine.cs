@@ -1,7 +1,11 @@
-﻿using RpR.ResponseEngines.Infrastructure;
+﻿#region using
+using RpR.ResponseEngines.Infrastructure;
 using System;
+using System.Collections.Generic;
 using System.Security.Principal;
 using System.Web;
+
+#endregion
 
 namespace RpR.RequestEngines.Infrastructure
 {
@@ -11,15 +15,17 @@ namespace RpR.RequestEngines.Infrastructure
         private readonly HttpContext _context;
         public HttpContext HttpContext { get { return _context; } }
         public IPrincipal CurrentUser { get { return _context.User; } }
-        public bool IsAuthenticated { get { return _context.User.Identity.IsAuthenticated; } } 
+        public bool IsAuthenticated { get { return _context.User.Identity.IsAuthenticated; } }
+        public List<string> Errors { get; set; }
         #endregion
 
-        #region .ctor
+        #region .ctors
         public RequestEngine()
         {
             _context = HttpContext.Current;
             if (_context == null)
                 throw new InvalidOperationException("Current http-context is null", (Exception)null);
+            Errors = new List<string>();
         }
         #endregion
 

@@ -1,8 +1,10 @@
-﻿using Ninject;
+﻿#region using
+using Ninject;
 using RpR.ResponseEngines.Infrastructure.Infrastructure;
 using System;
 using System.Security.Principal;
-using System.Web;
+using System.Web; 
+#endregion
 
 namespace RpR.ResponseEngines.Infrastructure
 {
@@ -25,14 +27,8 @@ namespace RpR.ResponseEngines.Infrastructure
         #region ContentType
         public string ContentType
         {
-            get
-            {
-                return _context.Response.ContentType;
-            }
-            set
-            {
-                _context.Response.ContentType = value;
-            }
+            get { return _context.Response.ContentType; }
+            set { _context.Response.ContentType = value; }
         }
         #endregion
 
@@ -61,7 +57,7 @@ namespace RpR.ResponseEngines.Infrastructure
         {
             string requestTarget = _context.Request.Url.AbsolutePath
                 .Substring(_context.Request.Url.AbsolutePath.LastIndexOf("/") + 1);
-            HttpResponse.Write(_response.GetByRoutes(requestTarget, null));
+            HttpResponse.Write(_response.GetByRoutes(requestTarget, (string)null));
         } 
         #endregion
     }

@@ -1,50 +1,47 @@
-﻿using BLL.Infrastructure;
+﻿#region using
+using BLL.Infrastructure;
+using BLL.Security.Contexts;
 using BLL.Security.Infrastructure;
+using BLL.Security.PasswordEngines;
 using BLL.Security.Validators;
 using BLL.Services;
 using DAL.Entities;
 using System;
-using System.Collections.Generic;
+using System.Collections.Generic; 
+#endregion
 
 namespace BLL.Security
 {
     public class DefaultRegistration : IRegistration
     {
+        private readonly IAppContext _context;
         private readonly IUserService _userService;
         private readonly IPasswordEngine _passwordEngine;
         private readonly IValidatorFactory _validatorsEngine;
 
         #region .ctors
         public DefaultRegistration()
-            : this(new UserService(), new PasswordEngineMD5(), new ValidatorFactory())
-        { }
-
-        public DefaultRegistration(IUserService userService)
-            : this(userService, new PasswordEngineMD5(), new ValidatorFactory())
+            : this(new UserService(), new PasswordEngineMD5(), new ValidatorFactory(), new WebContext())
         { }
 
         public DefaultRegistration(IPasswordEngine passwordEngine)
-            : this(new UserService(), passwordEngine, new ValidatorFactory())
+            : this(new UserService(), passwordEngine, new ValidatorFactory(), new WebContext())
         { }
 
-        public DefaultRegistration(IValidatorFactory validatorsEngine)
-            : this(new UserService(), new PasswordEngineMD5(), validatorsEngine)
-        { }
-
-        public DefaultRegistration(IUserService userService, IPasswordEngine passwordEngine)
-            : this(userService, passwordEngine, new ValidatorFactory())
+        public DefaultRegistration(IUserService userService)
+            : this(userService, new PasswordEngineMD5(), new ValidatorFactory(), new WebContext(userService))
         { }
 
         public DefaultRegistration(IUserService userService, IValidatorFactory validatorsEngine)
-            : this(userService, new PasswordEngineMD5(), validatorsEngine)
+            : this(userService, new PasswordEngineMD5(), validatorsEngine, new WebContext(userService))
         { }
 
-        public DefaultRegistration(IPasswordEngine passwordEngine, IValidatorFactory validatorsEngine)
-            : this(new UserService(), passwordEngine, validatorsEngine)
+        public DefaultRegistration(IUserService userService, IAppContext context)
+            : this(userService, new PasswordEngineMD5(), new ValidatorFactory(), context)
         { }
 
         public DefaultRegistration(IUserService userService, IPasswordEngine passwordEngine,
-            IValidatorFactory validatorsEngine)
+            IValidatorFactory validatorsEngine, IAppContext context)
         {
             if (userService == null)
                 throw new ArgumentNullException("Service is null", (Exception)null);
@@ -52,22 +49,32 @@ namespace BLL.Security
                 throw new ArgumentNullException("Password engine is null", (Exception)null);
             if (validatorsEngine == null)
                 throw new ArgumentNullException("Validators engine is null", (Exception)null);
+            if (context == null)
+                throw new ArgumentNullException("Context is null", (Exception)null);
 
             _userService = userService;
             _passwordEngine = passwordEngine;
             _validatorsEngine = validatorsEngine;
+            _context = context;
         } 
         #endregion
 
-        #region AddNewUser
-        public bool AddNewUser(User user, out List<string> errors)
+        #region TryAddUser
+        public bool TryAddUser(User user, string passwordAgain, List<string> errors)
         {
-            if (_userService.IsExist(user.Username))
-                throw new ArgumentException("User exists already", (Exception)null);
-
+            if (errors == null) errors = new List<string>();
             bool isValid = true;
-            errors = new List<string>();
-            List<string> outErrors;
+            if (_userService.IsExist(user.Username))
+            {
+                errors.Add("This username exists already");
+                isValid = false;
+            }
+
+            if (!String.Equals(user.Password, passwordAgain, StringComparison.InvariantCulture))
+            {
+                errors.Add("Different passwords");
+                isValid = false;
+            }
 
             /* Validations: */ 
 
@@ -82,11 +89,8 @@ namespace BLL.Security
             }
             foreach (var v in passwordValidations)
             {
-                if (!v.IsValid(user.Password, out outErrors))
-                {
+                if (!v.IsValid(user.Password, errors))
                     isValid = false;
-                    errors.AddRange(outErrors);
-                }
             }  
             #endregion
 
@@ -95,11 +99,8 @@ namespace BLL.Security
             IEnumerable<IValidation> usernameValidations = validator.GetValidations();
             foreach (var v in usernameValidations)
             {
-                if (!v.IsValid(user.Username, out outErrors))
-                {
+                if (!v.IsValid(user.Username, errors))
                     isValid = false;
-                    errors.AddRange(outErrors);
-                }
             } 
             #endregion
 
@@ -108,19 +109,13 @@ namespace BLL.Security
             IEnumerable<IValidation> nameValidations = validator.GetValidations();
             foreach (var v in nameValidations)
             {
-                if (!v.IsValid(user.FirstName, out outErrors))
-                {
+                if (!v.IsValid(user.FirstName, errors))
                     isValid = false;
-                    errors.AddRange(outErrors);
-                }
             }
             foreach (var v in nameValidations)
             {
-                if (!v.IsValid(user.Surname, out outErrors))
-                {
+                if (!v.IsValid(user.Surname, errors))
                     isValid = false;
-                    ((List<string>)errors).AddRange(outErrors);
-                }
             } 
             #endregion
 
@@ -129,11 +124,8 @@ namespace BLL.Security
             IEnumerable<IValidation> emailValidations = validator.GetValidations();
             foreach (var v in emailValidations)
             {
-                if (!v.IsValid(user.Email, out outErrors))
-                {
+                if (!v.IsValid(user.Email, errors))
                     isValid = false;
-                    errors.AddRange(outErrors);
-                }
             } 
             #endregion
 
@@ -141,6 +133,7 @@ namespace BLL.Security
 
             user.Password = _passwordEngine.Create(user.Password);
             _userService.SaveUser(user);
+            _context.SetUserData(user.UserID.ToString());
             return true;
         } 
         #endregion

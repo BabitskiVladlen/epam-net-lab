@@ -1,34 +1,41 @@
-﻿using BLL.Infrastructure;
+﻿#region using
+using BLL.Infrastructure;
+using BLL.Security.Contexts;
 using BLL.Security.Infrastructure;
+using BLL.Security.PasswordEngines;
+using BLL.Security.Principal;
 using BLL.Services;
 using DAL.Entities;
 using System;
-using System.Linq;
-using System.Security.Principal;
+using System.Linq; 
+#endregion
 
 namespace BLL.Security
 {
     public class DefaultAuthentication : IAuthentication
     {
-        private IPrincipal _currentUser;
-        private IContext _context;
-        private IPasswordEngine _passwordEngine;
-        private IUserService _userService;
+        private readonly IAppContext _context;
+        private readonly IPasswordEngine _passwordEngine;
+        private readonly  IUserService _userService;
 
         #region .ctors
-        public DefaultAuthentication(IContext context)
-            : this(context, new UserService(), new PasswordEngineMD5())
+        public DefaultAuthentication()
+            : this(new UserService(), new PasswordEngineMD5(), new WebContext())
         { }
 
-        public DefaultAuthentication(IContext context, IUserService userService)
-            : this(context, userService, new PasswordEngineMD5())
+        public DefaultAuthentication(IPasswordEngine passwordEngine)
+            : this(new UserService(), passwordEngine, new WebContext())
         { }
 
-        public DefaultAuthentication(IContext context, IPasswordEngine passwordEngine)
-            : this(context, new UserService(), passwordEngine)
+        public DefaultAuthentication(IUserService userService)
+            : this(userService, new PasswordEngineMD5(), new WebContext(userService))
         { }
 
-        public DefaultAuthentication(IContext context, IUserService userService, IPasswordEngine passwordEngine)
+        public DefaultAuthentication(IUserService userService, IAppContext context)
+            : this(userService, new PasswordEngineMD5(), context)
+        { }
+
+        public DefaultAuthentication(IUserService userService, IPasswordEngine passwordEngine, IAppContext context)
         {
             if (context == null)
                 throw new ArgumentNullException("Context is null", (Exception)null);
@@ -55,10 +62,7 @@ namespace BLL.Security
                     .FirstOrDefault(u => String.Equals(u.Username, name, StringComparison.InvariantCultureIgnoreCase));
             if ((user != null) &&
                 (_passwordEngine.Verify(password, user.Password)))
-            {
                 _context.SetUserData(user.UserID.ToString());
-                _context.User = new UserProvider(_userService, user.UserID.ToString());
-            }
             return user;
         } 
         #endregion
@@ -67,24 +71,6 @@ namespace BLL.Security
         public void Logout()
         {
             _context.DeleteUserData();
-            _currentUser = new UserProvider(null, null);
-            _context.User = _currentUser;
-        } 
-        #endregion
-
-        #region CurrentUser
-        public IPrincipal CurrentUser
-        {
-            get
-            {
-                if (_currentUser != null) return _currentUser;
-                _currentUser = new UserProvider(_userService, _context.GetUserData());
-                return _currentUser;
-            }
-            set
-            {
-                _currentUser = value;
-            }
         } 
         #endregion
     }

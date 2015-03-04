@@ -1,11 +1,14 @@
-﻿using Ninject;
+﻿#region using
+using Ninject;
 using RpR.Infrastructure;
 using System;
 using System.Collections.Specialized;
 using System.Linq;
-using System.Web;
+using System.Reflection;
+using System.Web; 
+#endregion
 
-namespace RpR.ActionInvokers
+namespace RpR.MethodInvokers
 {
     public class MethodInvoker : IMethodInvoker
     {
@@ -14,21 +17,17 @@ namespace RpR.ActionInvokers
 
         #region .ctors
         public MethodInvoker()
-            : this(DependencyResolution.Kernel.Get<IModelBinder>(), HttpContext.Current)
+            : this(DependencyResolution.Kernel.Get<IModelBinder>())
         { }
 
-        public MethodInvoker(IModelBinder binder)
-            : this(binder, HttpContext.Current)
-        { }
-
-        private MethodInvoker(IModelBinder binder, HttpContext currentContext)
+        private MethodInvoker(IModelBinder binder)
         {
             if (binder == null)
                 throw new ArgumentNullException("IModelBinder is null", (Exception)null);
-            if (currentContext == null)
+            _currentContext = HttpContext.Current;
+            if (_currentContext == null)
                 throw new InvalidOperationException("Current http-context is null", (Exception)null);
             _binder = binder;
-            _currentContext = currentContext;
         }
         #endregion
 
@@ -38,19 +37,23 @@ namespace RpR.ActionInvokers
             if (engine == null)
                 throw new ArgumentNullException("Request engine is null", (Exception)null);
 
+            #region GetMethod
             string httpMethod = _currentContext.Request.HttpMethod;
-            var method = engine.GetType().GetMethods()
+            var method = engine.GetType().GetMethods(BindingFlags.Public)
                 .FirstOrDefault(m => String.Equals(m.Name, httpMethod, StringComparison.InvariantCultureIgnoreCase));
             if (method == null)
                 throw new MethodAccessException
-                    (httpMethod + " method doesn't exist in " + engine.GetType().Name, (Exception)null);
+                    ("Public " + httpMethod + "() method doesn't exist in " + engine.GetType().Name, (Exception)null); 
+            #endregion
+
+            #region GetHttpCollection
+            NameValueCollection httpCollettion = new NameValueCollection();
+            if (httpMethod == "GET") httpCollettion = HttpContext.Current.Request.QueryString;
+            else httpCollettion = HttpContext.Current.Request.Form; 
+            #endregion
 
             var parameters = method.GetParameters();
-            NameValueCollection qsCollettion = new NameValueCollection();
-            if (httpMethod == "GET") qsCollettion = HttpContext.Current.Request.QueryString;
-            else qsCollettion = HttpContext.Current.Request.Form;
-
-            object[] paramsValues = _binder.BindModel(parameters, qsCollettion);
+            object[] paramsValues = _binder.BindModel(parameters, httpCollettion);
             method.Invoke(engine, paramsValues);
         } 
         #endregion

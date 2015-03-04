@@ -1,10 +1,15 @@
-﻿using BLL.Infrastructure;
+﻿#region using
+using BLL.Infrastructure;
+using BLL.Tools;
 using DAL.Entities;
 using DAL.Infrastructure;
 using Ninject;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Drawing;
+using System.IO;
+using System.Linq; 
+#endregion
 
 namespace BLL.Services
 {
@@ -100,6 +105,41 @@ namespace BLL.Services
             int roleID = user.Role;
             RoleEntity roleEntity = _roleService.GetRoleByID(roleID);
             return String.Equals(roleEntity.Role, role, StringComparison.InvariantCultureIgnoreCase);
+        } 
+        #endregion
+
+        #region SaveImage
+        public void SaveImage(int userID, Stream inputStream, string contentType)
+        {
+            User user = GetUserByID(userID);
+            if (inputStream == null)
+                throw new ArgumentNullException("Stream is null", (Exception)null);
+            if (!inputStream.CanRead)
+                throw new ArgumentException("It cannot read from a stream", (Exception)null);
+            if (String.IsNullOrEmpty(contentType) || String.IsNullOrWhiteSpace(contentType))
+                throw new ArgumentNullException("Content type is null or empty");
+
+            ImageProcessor imgProc = new ImageProcessor();
+            int quality = 20;
+            byte[] originalImage = new byte[inputStream.Length],
+                compressedImage = new byte[inputStream.Length];
+            string mimeType = contentType;
+
+            using (inputStream)
+            {
+                Image img = Image.FromStream(inputStream);
+                using (MemoryStream memory = new MemoryStream())
+                {
+                    imgProc.CompressImage(img, mimeType, quality, memory);
+                    compressedImage = memory.ToArray();
+                }
+                inputStream.Read(originalImage, 0, (int)inputStream.Length);
+            }
+
+            user.Image = originalImage;
+            user.CompressedImage = compressedImage;
+            user.ImageMimeType = mimeType;
+            SaveUser(user);
         } 
         #endregion
     }

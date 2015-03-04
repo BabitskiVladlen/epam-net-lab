@@ -1,5 +1,6 @@
 ﻿using DAL.Entities;
 using System.Collections.Generic;
+using System.IO;
 
 namespace BLL.Infrastructure
 {
@@ -13,5 +14,6 @@ namespace BLL.Infrastructure
         void DisableUser(int userID);
         void EnableUser(int userID);
         bool IsInRole(int userID, string role);
+        void SaveImage(int userID, Stream inputStream, string contentType);
     }
 }

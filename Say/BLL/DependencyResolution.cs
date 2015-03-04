@@ -1,11 +1,13 @@
-﻿using BLL.Infrastructure;
+﻿#region using
+using BLL.Infrastructure;
 using BLL.Security;
 using BLL.Security.Infrastructure;
 using BLL.Security.Validators;
 using BLL.Services;
 using DAL.Infrastructure;
 using DAL.Repositories;
-using Ninject;
+using Ninject; 
+#endregion
 
 namespace BLL
 {
@@ -13,7 +15,7 @@ namespace BLL
     {
         public static readonly IKernel Kernel;
 
-        #region .ctor
+        #region .ctors
         static DependencyResolution()
         {
             Kernel = new StandardKernel();

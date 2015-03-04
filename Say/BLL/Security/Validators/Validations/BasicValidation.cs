@@ -7,10 +7,11 @@ namespace BLL.Security.Validators
     public class BasicValidation : IValidation
     {
         public string Selector { get; set; }
+
         #region IsValid
-        public bool IsValid(string str, out List<string> errors)
+        public bool IsValid(string str, List<string> errors)
         {
-            errors = new List<string>();
+            if (errors == null) errors = new List<string>();
             if (String.IsNullOrEmpty(str) || String.IsNullOrWhiteSpace(str))
             {
                 if (Selector == null) Selector = "Input string";

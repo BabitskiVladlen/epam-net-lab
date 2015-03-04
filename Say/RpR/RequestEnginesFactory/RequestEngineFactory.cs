@@ -1,11 +1,13 @@
-﻿using Ninject;
+﻿#region using
+using Ninject;
 using RpR.Infrastructure;
 using RpR.RequestEngines.Infrastructure;
 using System;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using System.Web;
+using System.Web; 
+#endregion
 
 namespace RpR.RequestEngineFactories
 {
@@ -22,7 +24,7 @@ namespace RpR.RequestEngineFactories
         public RequestEngineFactory(IMethodInvoker methodInvoker)
         {
             if (methodInvoker == null)
-                throw new ArgumentNullException("IMethodInvoker is null", (Exception)null);
+                throw new ArgumentNullException("MethodInvoker is null", (Exception)null);
             _methodInvoker = methodInvoker;
         } 
         #endregion
@@ -30,6 +32,7 @@ namespace RpR.RequestEngineFactories
         #region CreateEngine
         public void CreateEngine(string target)
         {
+            #region EngineName
             int i = target.IndexOf(".rpr");
             if ((i == -1) || (i == 0))
             {
@@ -38,34 +41,40 @@ namespace RpR.RequestEngineFactories
                 return;
             }
             string engineName = target.Substring(0, i);
-            engineName += "requestengine";
+            engineName += "requestengine"; 
+            #endregion
 
+            #region GetType
             Assembly[] curentAssemblies = AppDomain.CurrentDomain.GetAssemblies();
             var types = curentAssemblies.SelectMany(c => c.GetTypes());
             Type necessaryType = types.FirstOrDefault(t =>
                 (String.Equals(t.Name, engineName, StringComparison.InvariantCultureIgnoreCase) &&
                         t.IsSubclassOf(typeof(RequestEngine))));
             if (necessaryType == null)
-            try
-            {
-                new RequestEngine().GetDefault();
-            }
-            catch (Exception exc)
-            {
-                LogMessage.Add(exc, Level.Error);
-                HttpContext.Current.Response.Write("Not Fround =)"); // add not found
-                return;
-            }
+                try
+                {
+                    new RequestEngine().GetDefault();
+                }
+                catch (Exception exc)
+                {
+                    LogMessage.Add(exc, Level.Error);
+                    HttpContext.Current.Response.Write("Not Fround =)"); // add not found
+                    return;
+                } 
+            #endregion
 
-            var ctor = necessaryType.GetConstructors().FirstOrDefault(c => c.GetParameters().Length == 0);
+            #region GetCtor
+            var ctor = necessaryType.GetConstructors(BindingFlags.Public)
+                .FirstOrDefault(c => c.GetParameters().Length == 0);
             if (ctor == null)
             {
-                LogMessage.Add("Constructor without parameters of " +
-                    engineName.ToUpper(CultureInfo.InvariantCulture) + " is null", Level.Error);
+                LogMessage.Add("Public constructor without parameters of " +
+                    engineName.ToUpper(CultureInfo.InvariantCulture) + " doesn't exist", Level.Error);
                 // not found
             }
-
             object instance = ctor.Invoke(null);
+            #endregion
+
             try
             {
                 _methodInvoker.InvokeMethod(instance);
@@ -74,7 +83,7 @@ namespace RpR.RequestEngineFactories
             {
                 LogMessage.Add(exc, Level.Error);
                 // error to client
-            }
+            } 
         } 
         #endregion
     }

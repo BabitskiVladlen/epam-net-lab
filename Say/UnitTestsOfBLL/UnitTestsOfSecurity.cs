@@ -1,12 +1,14 @@
-﻿using BLL.Infrastructure;
+﻿#region using
+using BLL.Infrastructure;
 using BLL.Security;
+using BLL.Security.Contexts;
 using BLL.Security.Infrastructure;
 using BLL.Security.Validators;
 using DAL.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using System;
-using System.Collections.Generic;
+using System.Collections.Generic; 
+#endregion
 
 namespace UnitTestsOfBLL
 {
@@ -20,11 +22,11 @@ namespace UnitTestsOfBLL
             // arrange
             IValidation validation = new BasicValidation();
             string password = null;
-            List<string> errors;
+            List<string> errors = new List<string>();
             bool isValid;
 
             // act
-            isValid = validation.IsValid(password, out errors);
+            isValid = validation.IsValid(password, errors);
 
             // assert
             Assert.IsFalse(isValid);
@@ -39,11 +41,11 @@ namespace UnitTestsOfBLL
             // arrange
             IValidation validation = new BasicValidation();
             string password = "";
-            List<string> errors;
+            List<string> errors = new List<string>();
             bool isValid;
 
             // act
-            isValid = validation.IsValid(password, out errors);
+            isValid = validation.IsValid(password, errors);
 
             // assert
             Assert.IsFalse(isValid);
@@ -58,11 +60,11 @@ namespace UnitTestsOfBLL
             // arrange
             IValidation validation = new BasicValidation();
             string password = "           ";
-            List<string> errors;
+            List<string> errors = new List<string>();
             bool isValid;
 
             // act
-            isValid = validation.IsValid(password, out errors);
+            isValid = validation.IsValid(password, errors);
 
             // assert
             Assert.IsFalse(isValid);
@@ -75,17 +77,17 @@ namespace UnitTestsOfBLL
         public void TestMethod_PasswordLengthIsTooLarge()
         {
             // arrange
-            IValidation validation = new LengthValidation() { Selector = "password" };
+            IValidation validation = new LengthValidation() { Selector = "Password" };
             string password = "0123456789101234567891012345678910123456789101234567891A";
-            List<string> errors;
+            List<string> errors = new List<string>();
             bool isValid;
 
             // act
-            isValid = validation.IsValid(password, out errors);
+            isValid = validation.IsValid(password, errors);
 
             // assert
             Assert.IsFalse(isValid);
-            Assert.IsTrue(errors.Contains("Input password must be less then 50 characters"));
+            Assert.IsTrue(errors.Contains("Password must be less then 50 characters"));
         } 
         #endregion
 
@@ -96,11 +98,11 @@ namespace UnitTestsOfBLL
             // arrange
             IValidation validation = new PasswordLengthValidation();
             string password = "01235A";
-            List<string> errors;
+            List<string> errors = new List<string>();
             bool isValid;
 
             // act
-            isValid = validation.IsValid(password, out errors);
+            isValid = validation.IsValid(password, errors);
 
             // assert
             Assert.IsFalse(isValid);
@@ -115,11 +117,11 @@ namespace UnitTestsOfBLL
             // arrange
             IValidation validation = new PasswordSymbolsValidation();
             string password = "abcdabc7";
-            List<string> errors;
+            List<string> errors = new List<string>();
             bool isValid;
 
             // act
-            isValid = validation.IsValid(password, out errors);
+            isValid = validation.IsValid(password, errors);
 
             // assert
             Assert.IsFalse(isValid);
@@ -134,11 +136,11 @@ namespace UnitTestsOfBLL
             // arrange
             IValidation validation = new PasswordSymbolsValidation();
             string password = "abcdacdA";
-            List<string> errors;
+            List<string> errors = new List<string>();
             bool isValid;
 
             // act
-            isValid = validation.IsValid(password, out errors);
+            isValid = validation.IsValid(password, errors);
 
             // assert
             Assert.IsFalse(isValid);
@@ -154,13 +156,13 @@ namespace UnitTestsOfBLL
             IValidator validator = new PasswordValidator();
             IEnumerable<IValidation> validations = validator.GetValidations();
             string password = "abcdacdA7";
-            List<string> errors = new List<string>(); ;
+            List<string> errors = new List<string>();
             bool isValid = true;
 
             // act
             foreach (var v in validations)
             {
-                if (!v.IsValid(password, out errors))
+                if (!v.IsValid(password, errors))
                     isValid = false;
             }
 
@@ -177,11 +179,11 @@ namespace UnitTestsOfBLL
             // arrange
             IValidation validation = new AdminPasswordValidation();
             string password = "abcdacdA7";
-            List<string> errors;
+            List<string> errors = new List<string>();
             bool isValid;
 
             // act
-            isValid = validation.IsValid(password, out errors);
+            isValid = validation.IsValid(password, errors);
 
             // assert
             Assert.IsFalse(isValid);
@@ -196,11 +198,11 @@ namespace UnitTestsOfBLL
             // arrange
             IValidation validation = new AdminPasswordValidation();
             string password = "abcdacdV7";
-            List<string> errors;
+            List<string> errors = new List<string>();
             bool isValid;
 
             // act
-            isValid = validation.IsValid(password, out errors);
+            isValid = validation.IsValid(password, errors);
 
             // assert
             Assert.IsTrue(isValid);
@@ -209,7 +211,6 @@ namespace UnitTestsOfBLL
 
         #region CannotAddNewUserWithWrongPassword
         [TestMethod]
-        [ExpectedException(typeof(ArgumentException))]
         public void TestMethod_CannotAddNewUserWithWrongPassword()
         {
             // arrange
@@ -220,11 +221,38 @@ namespace UnitTestsOfBLL
             user.Password = "123";
             user.Email = "babitski.vladlen@gmail.com";
             Mock<IUserService> mock = new Mock<IUserService>();
-            IRegistration reg = new DefaultRegistration(mock.Object);
-            List<string> errors;
+            IRegistration reg = new DefaultRegistration(mock.Object, new MockContext(mock.Object));
+            List<string> errors = new List<string>();
 
             // act
-            reg.AddNewUser(user, out errors);
+            bool result = reg.TryAddUser(user, user.Password, errors);
+
+            // assert
+            Assert.IsFalse(result);
+        } 
+        #endregion
+
+        #region CannotAddNewUserWithDifferentPasswords
+        [TestMethod]
+        public void TestMethod_CannotAddNewUserWithDifferentPasswords()
+        {
+            // arrange
+            User user = new User();
+            user.FirstName = "Vladlen";
+            user.Surname = "Babitski";
+            user.Username = "Vladlen";
+            user.Password = "123Vladlen";
+            user.Email = "babitski.vladlen@gmail.com";
+            Mock<IUserService> mock = new Mock<IUserService>();
+            IRegistration reg = new DefaultRegistration(mock.Object, new MockContext(mock.Object));
+            List<string> errors = new List<string>();
+
+            // act
+            bool result = reg.TryAddUser(user, "123Vladle", errors);
+
+            // assert
+            Assert.IsFalse(result);
+            Assert.IsTrue(errors.Contains("Different passwords"));
         } 
         #endregion
 
@@ -240,11 +268,11 @@ namespace UnitTestsOfBLL
             user.Password = "123Vladlen";
             user.Email = "babitski.vladlen@gmail.com";
             Mock<IUserService> mock = new Mock<IUserService>();
-            IRegistration reg = new DefaultRegistration(mock.Object);
-            List<string> errors;
+            IRegistration reg = new DefaultRegistration(mock.Object, new MockContext(mock.Object));
+            List<string> errors = new List<string>();
 
             // act
-            reg.AddNewUser(user, out errors);
+            reg.TryAddUser(user, user.Password, errors);
 
             // assert
             mock.Verify(m => m.SaveUser(It.IsAny<User>()), Times.Once);
@@ -258,11 +286,11 @@ namespace UnitTestsOfBLL
             // arrange
             IValidation validation = new EmailSymbolsValidation();
             string email = "vladlen";
-            List<string> errors;
+            List<string> errors = new List<string>();
             bool isValid;
 
             // act
-            isValid = validation.IsValid(email, out errors);
+            isValid = validation.IsValid(email, errors);
 
             // assert
             Assert.IsFalse(isValid);
@@ -277,11 +305,11 @@ namespace UnitTestsOfBLL
             // arrange
             IValidation validation = new EmailSymbolsValidation();
             string email = "vladlen@mail";
-            List<string> errors;
+            List<string> errors = new List<string>();
             bool isValid;
 
             // act
-            isValid = validation.IsValid(email, out errors);
+            isValid = validation.IsValid(email, errors);
 
             // assert
             Assert.IsFalse(isValid);
@@ -296,11 +324,11 @@ namespace UnitTestsOfBLL
             // arrange
             IValidation validation = new EmailSymbolsValidation();
             string email = "vladlen@mail.b";
-            List<string> errors;
+            List<string> errors = new List<string>();
             bool isValid;
 
             // act
-            isValid = validation.IsValid(email, out errors);
+            isValid = validation.IsValid(email, errors);
 
             // assert
             Assert.IsFalse(isValid);
@@ -315,11 +343,11 @@ namespace UnitTestsOfBLL
             // arrange
             IValidation validation = new EmailSymbolsValidation();
             string email = "@.";
-            List<string> errors;
+            List<string> errors = new List<string>();
             bool isValid;
 
             // act
-            isValid = validation.IsValid(email, out errors);
+            isValid = validation.IsValid(email, errors);
 
             // assert
             Assert.IsFalse(isValid);
@@ -334,11 +362,11 @@ namespace UnitTestsOfBLL
             // arrange
             IValidation validation = new EmailSymbolsValidation();
             string email = "vladlen@mail.ru";
-            List<string> errors;
+            List<string> errors = new List<string>();
             bool isValid;
 
             // act
-            isValid = validation.IsValid(email, out errors);
+            isValid = validation.IsValid(email, errors);
 
             // assert
             Assert.IsTrue(isValid);

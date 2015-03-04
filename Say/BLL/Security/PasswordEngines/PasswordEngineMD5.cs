@@ -3,7 +3,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace BLL.Security
+namespace BLL.Security.PasswordEngines
 {
     public class PasswordEngineMD5 : IPasswordEngine
     {

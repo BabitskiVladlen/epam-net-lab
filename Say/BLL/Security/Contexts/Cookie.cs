@@ -7,13 +7,13 @@ namespace BLL.Security
     public static class Cookie
     {
         #region Create
-        public static void Create(string username, string cookieName, bool isPersistent = true)
+        public static void Create(string data, string cookieName, bool isPersistent = true)
         {
             HttpContext context = HttpContext.Current;
             if (context == null)
                 throw new InvalidOperationException("Current http-context is null", (Exception)null);
-            if (String.IsNullOrEmpty(username) || String.IsNullOrWhiteSpace(username))
-                throw new ArgumentNullException("Username is null or empty", (Exception)null);
+            if (String.IsNullOrEmpty(data) || String.IsNullOrWhiteSpace(data))
+                throw new ArgumentNullException("Data is null or empty", (Exception)null);
             if (String.IsNullOrEmpty(cookieName) || String.IsNullOrWhiteSpace(cookieName))
                 throw new ArgumentNullException("CookieName is null or empty", (Exception)null);
             if (context == null)
@@ -21,7 +21,7 @@ namespace BLL.Security
 
             FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(
                 1,
-                username,
+                data,
                 DateTime.Now,
                 DateTime.Now.Add(FormsAuthentication.Timeout),
                 isPersistent,

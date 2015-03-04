@@ -6,12 +6,12 @@ namespace BLL.Security.Validators
     public class PasswordLengthValidation : IValidation
     {
         #region IsValid
-        public bool IsValid(string password, out List<string> errors)
+        public bool IsValid(string password, List<string> errors)
         {
             bool isValid = true;
-            errors = new List<string>();
+            if (errors == null) errors = new List<string>();
             BasicValidation def = new BasicValidation() { Selector = "Password" };
-            if (!def.IsValid(password, out errors))
+            if (!def.IsValid(password, errors))
                 return false;
 
             if (password.Length < 7)

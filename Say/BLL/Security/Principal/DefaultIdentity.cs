@@ -2,21 +2,22 @@
 using BLL.Security.Infrastructure;
 using DAL.Entities;
 using System;
-using System.Linq;
 
-namespace BLL.Security
+namespace BLL.Security.Principal
 {
-    internal class UserIndentity : IUserIdentity
+    public class DefaultIndentity : IUserIdentity
     {
-        private readonly IUserService _userService;
-
-        #region .ctor
-        public UserIndentity(IUserService userService, string id)
+        #region .ctors
+        public DefaultIndentity(IUserService userService, string id)
         {
-            _userService = userService;
-            int i;
-            if (Int32.TryParse(id, out i))
-                User = _userService.GetUserByID(i);
+            if ((userService != null) &&
+                !String.IsNullOrEmpty(id) &&
+                !String.IsNullOrWhiteSpace(id))
+            {
+                int i;
+                if (Int32.TryParse(id, out i))
+                User = userService.GetUserByID(i);
+            }
         } 
         #endregion
 
@@ -27,7 +28,7 @@ namespace BLL.Security
         #region AuthenticationType
         public string AuthenticationType
         {
-            get { return "Basic authentication."; }
+            get { return "Basic authentication"; }
         } 
         #endregion
 
@@ -41,10 +42,7 @@ namespace BLL.Security
         #region Name
         public string Name
         {
-            get
-            {
-                return User != null ? User.Username : null;
-            }
+            get { return User != null ? User.Username : null; }
         } 
         #endregion
     }

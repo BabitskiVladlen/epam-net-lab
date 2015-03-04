@@ -51,11 +51,11 @@
     <Compile Include="Infrastructure\IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\Contexts\Cookie.cs" />
-    <Compile Include="Security\Contexts\TestContext.cs" />
+    <Compile Include="Security\Contexts\MockContext.cs" />
     <Compile Include="Security\Contexts\WebContext.cs" />
     <Compile Include="Security\DefaultAuthentication.cs" />
     <Compile Include="Security\Infrastructure\IAuthentication.cs" />
-    <Compile Include="Security\Infrastructure\IContext.cs" />
+    <Compile Include="Security\Infrastructure\IAppContext.cs" />
     <Compile Include="Security\Infrastructure\IPasswordEngine.cs" />
     <Compile Include="Security\Infrastructure\IRegistration.cs" />
     <Compile Include="Security\Infrastructure\IUserIdentity.cs" />
@@ -63,8 +63,8 @@
     <Compile Include="Security\Infrastructure\IValidator.cs" />
     <Compile Include="Security\Infrastructure\IValidatorFactory.cs" />
     <Compile Include="Security\PasswordEngines\PasswordEngineMD5.cs" />
-    <Compile Include="Security\Principal\UserIdentity.cs" />
-    <Compile Include="Security\Principal\UserProvider.cs" />
+    <Compile Include="Security\Principal\DefaultIdentity.cs" />
+    <Compile Include="Security\Principal\DefaultPrincipal.cs" />
     <Compile Include="Security\DefaultRegistration.cs" />
     <Compile Include="Security\Validators\NameValidator.cs" />
     <Compile Include="Security\Validators\Validations\AdminPasswordValidation.cs" />

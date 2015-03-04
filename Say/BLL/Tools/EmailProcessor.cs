@@ -3,8 +3,7 @@ using System;
 using System.Net;
 using System.Net.Mail;
 
-
-namespace BLL
+namespace BLL.Tools
 {
     public class EmailProcessor
     {
@@ -12,7 +11,7 @@ namespace BLL
         private User _fromUser;
         public User _toUser;
 
-        #region .ctor
+        #region .ctors
         public EmailProcessor(User fromUser, User toUser, string email)
         {
             if (String.IsNullOrEmpty(email) || String.IsNullOrWhiteSpace(email))

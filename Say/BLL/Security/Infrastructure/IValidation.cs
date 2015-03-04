@@ -3,6 +3,6 @@ namespace BLL.Security.Infrastructure
 {
     public interface IValidation
     {
-        bool IsValid(string str, out List<string> errors);
+        bool IsValid(string str, List<string> errors);
     }
 }
