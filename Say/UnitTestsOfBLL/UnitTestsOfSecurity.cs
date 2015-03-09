@@ -221,7 +221,8 @@ namespace UnitTestsOfBLL
             user.Password = "123";
             user.Email = "babitski.vladlen@gmail.com";
             Mock<IUserService> mock = new Mock<IUserService>();
-            IRegistration reg = new DefaultRegistration(mock.Object, new MockContext(mock.Object));
+            IRegistration reg = new DefaultRegistration(mock.Object,  (IValidatorFactory)null,
+                (IPasswordEngine)null, new MockContext(mock.Object));
             List<string> errors = new List<string>();
 
             // act
@@ -244,7 +245,8 @@ namespace UnitTestsOfBLL
             user.Password = "123Vladlen";
             user.Email = "babitski.vladlen@gmail.com";
             Mock<IUserService> mock = new Mock<IUserService>();
-            IRegistration reg = new DefaultRegistration(mock.Object, new MockContext(mock.Object));
+            IRegistration reg = new DefaultRegistration(mock.Object, (IValidatorFactory)null,
+                (IPasswordEngine)null, new MockContext(mock.Object));
             List<string> errors = new List<string>();
 
             // act
@@ -268,7 +270,8 @@ namespace UnitTestsOfBLL
             user.Password = "123Vladlen";
             user.Email = "babitski.vladlen@gmail.com";
             Mock<IUserService> mock = new Mock<IUserService>();
-            IRegistration reg = new DefaultRegistration(mock.Object, new MockContext(mock.Object));
+            IRegistration reg = new DefaultRegistration(mock.Object, (IValidatorFactory)null,
+                (IPasswordEngine)null, new MockContext(mock.Object));
             List<string> errors = new List<string>();
 
             // act

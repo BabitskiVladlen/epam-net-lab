@@ -1,13 +1,17 @@
-﻿using NLog;
+﻿#region using
+using NLog;
 using System;
-using System.Text;
+using System.Text; 
+#endregion
 
 namespace RpR
 {
     public enum Level { Trace, Debug, Info, Warn, Error, Fatal };
     public static class LogMessage
     {
-        private static Logger _logger = LogManager.GetCurrentClassLogger();
+        #region Fields&Props
+        private static Logger _logger = LogManager.GetCurrentClassLogger(); 
+        #endregion
 
         #region Add_Exc
         public static void Add(Exception exc, Level level)

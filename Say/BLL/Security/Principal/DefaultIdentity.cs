@@ -1,12 +1,46 @@
-﻿using BLL.Infrastructure;
-using BLL.Security.Infrastructure;
+﻿#region using
+using BLL.Infrastructure;
 using DAL.Entities;
 using System;
+using System.Security.Principal;
+
+#endregion
 
 namespace BLL.Security.Principal
 {
-    public class DefaultIndentity : IUserIdentity
+    public class DefaultIndentity : IIdentity
     {
+        #region Fields&Props
+        private readonly IUserService _userService;
+        private readonly string _name;
+
+        #region AuthenticationType
+        public string AuthenticationType
+        {
+            get { return "Basic authentication"; }
+        }
+        #endregion
+
+        #region IsAuthenticted
+        public bool IsAuthenticated
+        {
+            get
+            {
+                return (_name != null) &&
+                    !(_userService.GetUserByID(_name).IsDeleted);
+            }
+        }
+        #endregion
+
+        #region Name
+        public string Name
+        {
+            get { return _name; }
+        }
+        #endregion 
+
+        #endregion
+
         #region .ctors
         public DefaultIndentity(IUserService userService, string id)
         {
@@ -14,35 +48,10 @@ namespace BLL.Security.Principal
                 !String.IsNullOrEmpty(id) &&
                 !String.IsNullOrWhiteSpace(id))
             {
-                int i;
-                if (Int32.TryParse(id, out i))
-                User = userService.GetUserByID(i);
+                User user = userService.GetUserByID(id);
+                _name = (user != null) ? id : null;
+                _userService = userService;
             }
-        } 
-        #endregion
-
-        #region User
-        public User User { get; set; } 
-        #endregion
-
-        #region AuthenticationType
-        public string AuthenticationType
-        {
-            get { return "Basic authentication"; }
-        } 
-        #endregion
-
-        #region IsAuthenticted
-        public bool IsAuthenticated
-        {
-            get { return (User != null) && !(User.IsDeleted); }
-        } 
-        #endregion
-
-        #region Name
-        public string Name
-        {
-            get { return User != null ? User.Username : null; }
         } 
         #endregion
     }

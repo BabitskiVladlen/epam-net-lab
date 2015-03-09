@@ -1,0 +1,56 @@
+<div id="info">
+[info/]
+</div>
+  
+  <form enctype="multipart/form-data" id="profile-picture-form"  action="picture.rpr" method="post">
+    <img id="profile-picture" src="picture.rpr" />
+    <br />
+    <span class="fileUpload">
+        <span class="fileUpload-buttonName">Upload</span>
+        <input name="upload" type="file" class="button fileUpload-input" />
+    </span>
+    <input class="button save-image" value="Save" type="submit" />
+</form>
+
+<form  id="profile-form" action="profile.rpr" method="post">
+    <table>
+        <caption>Profile information</caption>
+        <tr>
+            <td>First name</td>
+            <td><input class="textbox" name="firstname" type="text" value="[firstname/]" /></td>
+        </tr>
+                        
+        <tr>
+            <td>Surname</td>
+            <td><input class="textbox" name="surname" type="text" value="[surname/]" /></td>
+        </tr>
+
+        <tr>
+            <td>Username</td>
+            <td><input class="textbox" name="username" type="text" value="[username/]" /></td>
+        </tr>
+
+        <tr>
+            <td>Old password</td>
+            <td><input class="textbox" name="oldpassword" type="password" value="" /></td>
+        </tr>
+      
+        <tr>
+            <td>New password</td>
+            <td><input class="textbox" name="password" type="password" value="" /></td>
+        </tr>
+                        
+        <tr>
+            <td>Password again</td>
+            <td><input class="textbox" name="passwordagain" type="password" value="" /></td>
+        </tr>
+
+        <tr>
+            <td>Email</td>
+            <td><input class="textbox" name="email" type="text" value="[email/]" /></td>
+        </tr>
+
+        <tr><td><input class="button" value="OK" type="submit" /></td></tr>
+    </table>
+</form>
+

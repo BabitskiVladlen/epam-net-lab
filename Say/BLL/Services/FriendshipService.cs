@@ -12,26 +12,16 @@ namespace BLL.Services
 {
     public class FriendshipService : IFriendshipService
     {
+        #region Fields&Props
         private readonly IFriendshipRepository _friendshipRepository;
-        private readonly IUserService _userService;
+        private readonly IUserService _userService; 
+        #endregion
 
         #region .ctors
-        public FriendshipService()
-            : this(DependencyResolution.Kernel.Get<IFriendshipRepository>(), new UserService())
-        { }
-
-        public FriendshipService(IFriendshipRepository friendshipRepository)
-            : this(friendshipRepository, new UserService())
-        { }
-
-        public FriendshipService(IFriendshipRepository friendshipRepository, IUserService userService)
+        public FriendshipService(IFriendshipRepository friendshipRepository = null, IUserService userService = null)
         {
-            if (friendshipRepository == null)
-                throw new ArgumentNullException("Repository is null", (Exception)null);
-            if (userService == null)
-                throw new ArgumentNullException("Service is null", (Exception)null);
-            _friendshipRepository = friendshipRepository;
-            _userService = userService;
+            _friendshipRepository = friendshipRepository ?? DependencyResolution.Kernel.Get<IFriendshipRepository>();
+            _userService = userService ?? new UserService();
         } 
         #endregion
 
@@ -62,6 +52,7 @@ namespace BLL.Services
         public void AcceptFriendship(int friendshipID)
         {
             Friendship friendship = GetFriendshipByID(friendshipID);
+            if (friendship == null) return;
             friendship.Waiting = false;
             SaveFriendship(friendship);
             try
@@ -104,9 +95,11 @@ namespace BLL.Services
 
         private void SetCountOfUserFriends(Friendship friendship, bool add)
         {
+            if (friendship == null) return;
             if (friendship.Waiting)
             {
                 User user = _userService.GetUserByID(friendship.Friend2);
+                if (user == null) return;
                 if (add) ++user.NewFriends;
                 else --user.NewFriends;
                 _userService.SaveUser(user);

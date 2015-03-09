@@ -5,6 +5,7 @@ using BLL.Security.Principal;
 using BLL.Services;
 using System;
 using System.Security.Principal;
+using System.Threading;
 using System.Web; 
 #endregion
 
@@ -12,10 +13,12 @@ namespace BLL.Security.Contexts
 {
     public class WebContext : IAppContext
     {
+        #region Fields&Props
         private IPrincipal _user;
         private readonly IUserService _userService;
         private readonly HttpContext _httpContext;
-        private readonly string _cookieName;
+        private readonly string _cookieName; 
+        #endregion
 
         #region .ctors
         public WebContext(string cookieName = null)
@@ -37,7 +40,7 @@ namespace BLL.Security.Contexts
         #region GetUserData
         public string GetUserData()
         {
-            var ticket = Cookie.Read(_cookieName, _httpContext);
+            var ticket = Cookie.Read(_cookieName);
             if (ticket == null) return null;
             return ticket.Name;
         } 
@@ -49,7 +52,7 @@ namespace BLL.Security.Contexts
             if (String.IsNullOrEmpty(id) || String.IsNullOrWhiteSpace(id))
                 throw new ArgumentNullException("Data is null or empty", (Exception)null);
             Cookie.Create(id, _cookieName);
-            _user = new DefaultPrincipal(_userService, id);
+            _user =  _httpContext.User = Thread.CurrentPrincipal = new DefaultPrincipal(_userService, id);
         }
         #endregion
 
@@ -57,7 +60,8 @@ namespace BLL.Security.Contexts
         public void DeleteUserData()
         {
             Cookie.Delete(_cookieName);
-            _user = new DefaultPrincipal((IUserService)null, (string)null);
+            _user = _httpContext.User = Thread.CurrentPrincipal =
+                new DefaultPrincipal((IUserService)null, (string)null);
         } 
         #endregion
 
@@ -66,9 +70,9 @@ namespace BLL.Security.Contexts
         {
             get
             {
-                return
-                    _user != null ? _user :
+                if (_user == null)
                     _user = new DefaultPrincipal(_userService, GetUserData());
+                return _user;
             }
             set { _user = value; }
         }

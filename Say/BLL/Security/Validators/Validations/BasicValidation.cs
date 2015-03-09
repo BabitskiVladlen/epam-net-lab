@@ -1,12 +1,16 @@
-﻿using BLL.Security.Infrastructure;
+﻿#region using
+using BLL.Security.Infrastructure;
 using System;
-using System.Collections.Generic;
+using System.Collections.Generic; 
+#endregion
 
 namespace BLL.Security.Validators
 {
     public class BasicValidation : IValidation
     {
-        public string Selector { get; set; }
+        #region Fields&Props
+        public string Selector { get; set; } 
+        #endregion
 
         #region IsValid
         public bool IsValid(string str, List<string> errors)

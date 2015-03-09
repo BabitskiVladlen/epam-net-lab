@@ -1,5 +1,7 @@
-﻿using DAL.Entities;
-using System.Linq;
+﻿#region using
+using DAL.Entities;
+using System.Linq; 
+#endregion
 
 namespace DAL.Infrastructure
 {

@@ -1,6 +1,8 @@
 html, body
 {
-	background-color: #2F91A0;
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 	height: 100%;
 	width: 100%;
 	margin: 0;
@@ -9,46 +11,49 @@ html, body
 
 #body-wrapper
 {
-	background-color: #70FCF5;
-	position: absolute;
-	top: 10px;
-	bottom: 10px;
-	left: 20%;
-	right: 20%;
-	height: 95%;
-	min-width: 400px;
-	min-height: 500px;
+	background-image: url(../images/base.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+	position: relative;
+    width: 60%;
+    height: 99.5%;
+    margin: 0px auto;
+	min-width: 600px;
+	min-height: 600px;
 	font-size: 1.2em;
 	font-family: serif;
-	color: #3D423C;
+	color: darkslategrey;
 	border-radius: 5px;
+	border-color: #3D423C;
+	border-width: 1px;
+	border-style: solid;
 }
 
 #header
 {
 	margin-left: 7px;
-	width: 97%;
+	margin-right: 7px;
 	color: #3F3F3F;
 }
 
 #main
 {
 	position: absolute;
-	bottom: 50px;
 	top: 70px;
-	width: 97%;
+	bottom: 50px;
 	left: 10px;
+	right: 10px;
 	overflow: auto;
 }
 
 #footer
 {
 	position:absolute;
-	margin-left: 7px;
-	width: 97%;
-	height: 50px;
-	bottom: 0;
 	margin-top: 10px;
+	bottom: 0;
+	left: 10px;
+	right: 10px;
+	height: 50px;
 	text-align: center;
 	font-size: 1em;
 }
@@ -82,10 +87,11 @@ html, body
 {
 	margin: 10px;
 	padding-top: 5px;
-	max-width: 95%;
+	min-width: 97%;
 	overflow: hidden;
 	word-wrap: break-word;
 }
+
 .messages-item, .friends-item
 {
 	max-height: 10em;
@@ -100,6 +106,7 @@ html, body
 	cursor: pointer;
 }
 
+
 .messages-name, .friends-name, .friends-email
 {
 	display: block;
@@ -108,14 +115,23 @@ html, body
 	overflow: hidden;
 }
 
-.messages-name, .friends-email
+.friends-name, .messages-name
 {
-	margin-bottom: 7px;
+	font-size: 0.9em;
 }
 
 .messages-name
 {
 	margin-bottom: 5px;
+}
+
+.friends-email
+{
+	margin-bottom: 10px;
+}
+
+.messages-name
+{
 	color: #2F51A0;
 }
 
@@ -124,11 +140,6 @@ html, body
 	font-size: 0.8em;
 }
 
-
-.friends-name, .messages-name
-{
-	font-size: 0.9em;
-}
 
 .messages-picture, .friends-picture,  #personalMessages-picture
 {
@@ -146,20 +157,16 @@ html, body
 	width: 170px;
 }
 
+
 .messages-last
 {
 	color: #3D423C;
 }
 
 
-#personalMessages-wrapper
-{
-}
-
 #personalMessages
 {
 	float: left;
-	// width:;
 }
 
 #personalMessages-form textarea
@@ -170,34 +177,113 @@ html, body
 
 .search
 {
-	margin-top: 10px;
-	width: 20em;
-	font-size: 0.7em;
+	font-size: 0.8em;
 	font-style: italic;
 	color: grey;
 }
 
-.button
+.button, .friends-sendMessage, .fileUpload-buttonName
 {
-    background: lightblue;
     color: #2F51A0;
-    border-radius: 3px;
     cursor: pointer;
+	border-style: solid;
+	border-width: 1.5px;
+	border-color: #2F51A0;
+}
+
+.fileUpload
+{
+	position: absolute;
+	margin-top: 5px;
+}
+
+.fileUpload-buttonName
+{
+	padding: 6.5px;
+	font-size: 0.85em;
+	cursor: pointer;
+}
+
+.fileUpload-input
+{
+	position: absolute;
+	top: 0;
+	left: -180px;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.save-image
+{
+	position: absolute;
+	left: 70px;
+	padding: 8.5px;
 }
 
 .friends-sendMessage
 {
-	background-color: lightblue;
-	padding: 3px;
-	border-style: solid;
-	border-width: 1px;
-	border-radius: 3px;
+	position: absolute;
+	padding: 5px;
+}
+
+#registration-form
+{
+    width:  50%;
+	margin: 50px auto;
+}
+
+#profile-picture-form
+{
+	float: left;
+}
+
+#profile-picture
+{
+    margin-top: 5px;
+    margin-right: 15px;
+	width: 160px;
+}
+
+#profile-form caption, #registration-form caption
+{
+    margin-bottom: 10px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+#profile-form .button, #registration-form .button
+{
+	width: 100px;
+}
+
+.textbox
+{
+	margin-left: 20px;
+	height: 20px;
+    width: 100%;
+    border-color: grey;
+    margin-bottom: 5px;
+    padding: 5px 15px;
+}
+
+#info
+{
+	font-style: italic;
+	font-size: 0.8em;
+	font-weight: bold;
 }
 
 a
 {
 	color: #2F51A0;
 	text-decoration: none;
+}
+
+input, .friends-sendMessage, .fileUpload-buttonName
+{
+    border-radius: 50px;
+    background-color: whitesmoke;
+    outline: none;
 }
 
 ::-webkit-scrollbar

@@ -1,28 +1,34 @@
-﻿using DAL.Entities;
+﻿#region using
+using DAL.Entities;
 using DAL.Repositories;
-using System;
+using System; 
+#endregion
 
 namespace DAL.Validators
 {
     public static class Validator
     {
+        #region Fields&Props
         private readonly static UserRepository _userRepository = new UserRepository();
         private readonly static FriendshipRepository _friendshipRepository = new FriendshipRepository();
         private readonly static MessageRepository _messageRepository = new MessageRepository();
-        private readonly static RoleRepository _roleRepository = new RoleRepository();
+        private readonly static RoleRepository _roleRepository = new RoleRepository(); 
+        #endregion
 
         #region UserValidator
-        public static void UserValidator(User user, out User exUser)
+        public static User UserValidator(User user)
         {
             if (user == null)
                 throw new ArgumentNullException("User is null", (Exception)null);
-            exUser = null;
+
+            User exUser = null;
             if (user.UserID != 0)
             {
                 exUser = _userRepository.GetUserByID(user.UserID);
                 if (exUser == null)
-                    return;
+                    return exUser;
             }
+
             if (String.IsNullOrEmpty(user.Username) || String.IsNullOrWhiteSpace(user.Username))
                 throw new ArgumentException("Username is null or empty", (Exception)null);
             if (user.Username.Length > 50)
@@ -49,64 +55,78 @@ namespace DAL.Validators
                 throw new ArgumentException("Count of new friends < 0", (Exception)null);
             if (_roleRepository.GetRoleByID(user.Role) == null)
                 throw new ArgumentException("Invalid role", (Exception)null);
+
+            return exUser;
         }
         #endregion
 
         #region RoleValidator
-        public static void RoleValidator(RoleEntity role, out RoleEntity exRole)
+        public static RoleEntity RoleValidator(RoleEntity role)
         {
             if (role == null)
                 throw new ArgumentNullException("Role entity is null", (Exception)null);
-            exRole = null;
+
+            RoleEntity exRole = null;
             if (role.RoleID != 0)
             {
                 exRole = _roleRepository.GetRoleByID(role.RoleID);
                 if (exRole == null)
-                    return;
+                    return exRole;
             }
+
             if (String.IsNullOrEmpty(role.Role) || String.IsNullOrWhiteSpace(role.Role))
                 throw new ArgumentException("Role is null or empty", (Exception)null);
             if (role.Role.Length > 20)
                 throw new ArgumentException("Role must be less then 20 characters", (Exception)null);
+
+            return exRole;
         }
         #endregion
 
         #region FriendshipValidator
-        public static void FriendshipValidator(Friendship friendship, out Friendship exFriendship)
+        public static Friendship FriendshipValidator(Friendship friendship)
         {
             if (friendship == null)
                 throw new ArgumentNullException("Friendship entity is null", (Exception)null);
-            exFriendship = null;
+
+            Friendship exFriendship = null;
             if (friendship.FriendshipID != 0)
             {
                 exFriendship = _friendshipRepository.GetFriendshipByID(friendship.FriendshipID);
                 if (exFriendship == null)
-                    return;
+                    return exFriendship;
+
                 if (!exFriendship.Waiting) throw new ArgumentException("Friendship cannot be change");
                 if ((friendship.Friend1 != exFriendship.Friend1) || (friendship.Friend2 != exFriendship.Friend2))
                     throw new ArgumentException("Invalid state of friendship", (Exception)null);
             }
+
             if (_userRepository.GetUserByID(friendship.Friend1) == null)
                 throw new ArgumentException("Invalid friends", (Exception)null);
             if (_userRepository.GetUserByID(friendship.Friend2) == null)
                 throw new ArgumentException("Invalid friends", (Exception)null);
+
+            return exFriendship;
         }
         #endregion
 
         #region MessageValidator
-        public static void MessageValidator(MessageEntity message, out MessageEntity exMessage)
+        public static MessageEntity MessageValidator(MessageEntity message)
         {
             if (message == null)
                 throw new ArgumentNullException("Message entity is null", (Exception)null);
-            exMessage = null;
+
+            MessageEntity exMessage = null;
             if (message.MessageID != 0)
             {
                 exMessage = _messageRepository.GetMessageByID(message.MessageID);
                 if (exMessage == null)
-                    return;
+                    return exMessage;
+
                 if ((message.FromUser != exMessage.FromUser) || (message.ToUser != exMessage.ToUser))
                     throw new ArgumentException("Invalid state of message entity", (Exception)null);
             }
+
             if (String.IsNullOrEmpty(message.Message) || String.IsNullOrWhiteSpace(message.Message))
                 throw new ArgumentException("Message is null or empty", (Exception)null);
             if (message.Message.Length > 1000)
@@ -117,6 +137,8 @@ namespace DAL.Validators
                 throw new ArgumentException("Invalid recipient", (Exception)null);
             if (message.MessageTime.Day < DateTime.Now.Day)
                 throw new ArgumentException("Invalid date of message", (Exception)null);
+
+            return exMessage;
         }
         #endregion
     }

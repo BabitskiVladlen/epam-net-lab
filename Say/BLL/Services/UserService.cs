@@ -15,27 +15,16 @@ namespace BLL.Services
 {
     public class UserService : IUserService
     {
+        #region Fields&Props
         private readonly IUserRepository _userRepository;
-        private readonly IRoleService _roleService;
+        private readonly IRoleService _roleService; 
+        #endregion
 
         #region .ctors
-        public UserService()
-            : this(DependencyResolution.Kernel.Get<IUserRepository>(), new RoleService())
-        { }
-
-        public UserService(IUserRepository userRepository)
-            : this(userRepository, new RoleService())
-        { }
-
-        public UserService(IUserRepository userRepository, RoleService roleService)
+        public UserService(IUserRepository userRepository = null, IRoleService roleService = null)
         {
-            if (userRepository == null)
-                throw new ArgumentNullException("Repository is null", (Exception)null);
-            if (roleService == null)
-                throw new ArgumentNullException("Service is null", (Exception)null);
-
-            _userRepository = userRepository;
-            _roleService = roleService;
+            _userRepository = userRepository ?? DependencyResolution.Kernel.Get<IUserRepository>();
+            _roleService = roleService ?? new RoleService();
         } 
         #endregion
 
@@ -46,18 +35,34 @@ namespace BLL.Services
         } 
         #endregion
 
-        #region GetUserByID
+        #region GetUserByID(int)
         public User GetUserByID(int userID)
         {
             return _userRepository.GetUserByID(userID);
         } 
         #endregion
 
-        #region IsExist
-        public bool IsExist(string username)
+        #region GetUserByID(string)
+        public User GetUserByID(string userID)
         {
-            User user = Users.FirstOrDefault(u => u.Username == username);
-            return user != null;
+            int i;
+            User user = null; ;
+            if (Int32.TryParse(userID, out i))
+                user = GetUserByID(i);
+            return user; ;
+        }
+        #endregion
+
+        #region GetUser(selector)
+        public User GetUser(IEnumerable<string> username_email)
+        {
+            if ((username_email == null) || (username_email.Count() < 2))
+                throw new ArgumentException("Invalid selector", (Exception)null);
+
+            string[] selector = username_email.ToArray<string>();
+            return Users.FirstOrDefault(u =>
+                (String.Equals(u.Username, selector[0], StringComparison.InvariantCultureIgnoreCase) ||
+                (String.Equals(u.Email, selector[1], StringComparison.InvariantCultureIgnoreCase))));
         } 
         #endregion
 
@@ -83,6 +88,7 @@ namespace BLL.Services
         public void DisableUser(int userID)
         {
             User user = GetUserByID(userID);
+            if (user == null) return;
             user.IsDeleted = true;
             SaveUser(user);
         } 
@@ -112,6 +118,7 @@ namespace BLL.Services
         public void SaveImage(int userID, Stream inputStream, string contentType)
         {
             User user = GetUserByID(userID);
+            if (user == null) return;
             if (inputStream == null)
                 throw new ArgumentNullException("Stream is null", (Exception)null);
             if (!inputStream.CanRead)
@@ -132,10 +139,12 @@ namespace BLL.Services
                 {
                     imgProc.CompressImage(img, mimeType, quality, memory);
                     compressedImage = memory.ToArray();
+                    memory.Flush();
+                    imgProc.CompressImage(img, mimeType, 100, memory);
+                    originalImage = memory.ToArray();
                 }
-                inputStream.Read(originalImage, 0, (int)inputStream.Length);
             }
-
+            
             user.Image = originalImage;
             user.CompressedImage = compressedImage;
             user.ImageMimeType = mimeType;

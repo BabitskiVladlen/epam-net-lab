@@ -1,10 +1,7 @@
 ﻿#region using
 using RpR.ResponseEngines.Infrastructure;
-using System;
-using System.Collections.Generic;
 using System.Security.Principal;
 using System.Web;
-
 #endregion
 
 namespace RpR.RequestEngines.Infrastructure
@@ -12,37 +9,54 @@ namespace RpR.RequestEngines.Infrastructure
     public class RequestEngine
     {
         #region Fields&Props
-        private readonly HttpContext _context;
-        public HttpContext HttpContext { get { return _context; } }
-        public IPrincipal CurrentUser { get { return _context.User; } }
-        public bool IsAuthenticated { get { return _context.User.Identity.IsAuthenticated; } }
-        public List<string> Errors { get; set; }
+        private IPrincipal _user;
+        public HttpContext HttpContext { get; private set; }
+
+        #region User
+        public IPrincipal User
+        {
+            get
+            {
+                if (HttpContext != null)
+                    return HttpContext.User;
+                return _user;
+            }
+            set { _user = value; }
+        } 
+        #endregion
+
+        #region IsAuthenticated
+        public bool IsAuthenticated
+        {
+            get
+            {
+                if ((User != null) && (User.Identity != null))
+                    return User.Identity.IsAuthenticated ;
+                return false;
+            }
+        } 
+        #endregion
+
         #endregion
 
         #region .ctors
         public RequestEngine()
         {
-            _context = HttpContext.Current;
-            if (_context == null)
-                throw new InvalidOperationException("Current http-context is null", (Exception)null);
-            Errors = new List<string>();
+            HttpContext = HttpContext.Current;
         }
         #endregion
 
         #region IsInRole
         public bool IsInRole(string role)
         {
-            if (_context.User != null)
-                return _context.User.IsInRole(role);
-            return false;
+            return (User != null) ?  User.IsInRole(role) : false;
         }
         #endregion
 
-        #region GetDefault
+        #region GetDefaultResponse
         public void GetDefault()
         {
-            ResponseEngine responseEngine = new ResponseEngine();
-            responseEngine.GetDefaultResponse();
+            ResponseEngine.GetDefaultResponse();
         } 
         #endregion
     }

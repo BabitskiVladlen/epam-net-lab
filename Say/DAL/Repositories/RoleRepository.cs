@@ -1,15 +1,19 @@
-﻿using DAL.Contexts;
+﻿#region using
+using DAL.Contexts;
 using DAL.Entities;
 using DAL.Infrastructure;
 using DAL.Validators;
 using System;
-using System.Linq;
+using System.Linq; 
+#endregion
 
 namespace DAL.Repositories
 {
     public class RoleRepository : IRoleRepository
     {
-        private readonly EfDbContext _context = new EfDbContext();
+        #region Fields&Props
+        private readonly EfDbContext _context = new EfDbContext(); 
+        #endregion
 
         #region Roles
         public IQueryable<RoleEntity> Roles
@@ -29,7 +33,7 @@ namespace DAL.Repositories
         public void SaveRole(RoleEntity role)
         {
             RoleEntity exRole;
-            try { Validator.RoleValidator(role, out exRole); }
+            try { exRole = Validator.RoleValidator(role); }
             catch (ArgumentException exc)
             { throw exc; }
 

@@ -7,86 +7,63 @@ using BLL.Security.Validators;
 using BLL.Services;
 using DAL.Entities;
 using System;
-using System.Collections.Generic; 
+using System.Collections.Generic;
+using System.Linq;
 #endregion
 
 namespace BLL.Security
 {
     public class DefaultRegistration : IRegistration
     {
+        #region Fields&Props
         private readonly IAppContext _context;
         private readonly IUserService _userService;
         private readonly IPasswordEngine _passwordEngine;
-        private readonly IValidatorFactory _validatorsEngine;
+        private readonly IValidatorFactory _validatorFactory; 
+        #endregion
 
         #region .ctors
-        public DefaultRegistration()
-            : this(new UserService(), new PasswordEngineMD5(), new ValidatorFactory(), new WebContext())
-        { }
-
-        public DefaultRegistration(IPasswordEngine passwordEngine)
-            : this(new UserService(), passwordEngine, new ValidatorFactory(), new WebContext())
-        { }
-
-        public DefaultRegistration(IUserService userService)
-            : this(userService, new PasswordEngineMD5(), new ValidatorFactory(), new WebContext(userService))
-        { }
-
-        public DefaultRegistration(IUserService userService, IValidatorFactory validatorsEngine)
-            : this(userService, new PasswordEngineMD5(), validatorsEngine, new WebContext(userService))
-        { }
-
-        public DefaultRegistration(IUserService userService, IAppContext context)
-            : this(userService, new PasswordEngineMD5(), new ValidatorFactory(), context)
-        { }
-
-        public DefaultRegistration(IUserService userService, IPasswordEngine passwordEngine,
-            IValidatorFactory validatorsEngine, IAppContext context)
+        public DefaultRegistration(IUserService userService = null, IValidatorFactory validatorFactory = null,
+            IPasswordEngine passwordEngine = null, IAppContext context = null)
         {
-            if (userService == null)
-                throw new ArgumentNullException("Service is null", (Exception)null);
-            if (passwordEngine == null)
-                throw new ArgumentNullException("Password engine is null", (Exception)null);
-            if (validatorsEngine == null)
-                throw new ArgumentNullException("Validators engine is null", (Exception)null);
-            if (context == null)
-                throw new ArgumentNullException("Context is null", (Exception)null);
-
-            _userService = userService;
-            _passwordEngine = passwordEngine;
-            _validatorsEngine = validatorsEngine;
-            _context = context;
+            _userService = userService ?? new UserService();
+            _validatorFactory = validatorFactory ?? new ValidatorFactory();
+            _passwordEngine = passwordEngine ?? new MD5PasswordEngine();
+            _context = context ?? new WebContext();
         } 
         #endregion
 
         #region TryAddUser
         public bool TryAddUser(User user, string passwordAgain, List<string> errors)
         {
+            if (user == null)
+                throw new ArgumentNullException("User is null", (Exception)null);
+
             if (errors == null) errors = new List<string>();
             bool isValid = true;
-            if (_userService.IsExist(user.Username))
-            {
-                errors.Add("This username exists already");
-                isValid = false;
-            }
 
+            /* Validations: */
+
+            #region ExistsAlready
+            User exUser = _userService.GetUser(new string[] { user.Username, user.Email }.AsEnumerable<string>());
+            if ((exUser != null) && (user.UserID != exUser.UserID))
+            {
+                errors.Add("This username or email exist already");
+                isValid = false;
+            } 
+            #endregion
+
+            #region DifferentPasswords
             if (!String.Equals(user.Password, passwordAgain, StringComparison.InvariantCulture))
             {
                 errors.Add("Different passwords");
                 isValid = false;
-            }
+            } 
+            #endregion
 
-            /* Validations: */ 
-
-            #region password
-            List<IValidation> passwordValidations = new List<IValidation>();
-            IValidator validator = _validatorsEngine.PasswordValidator;
-            passwordValidations.AddRange(validator.GetValidations());
-            if (_userService.IsInRole(user.UserID, "Admin"))
-            {
-                validator = _validatorsEngine.AdminPasswordValidator;
-                passwordValidations.AddRange(validator.GetValidations());
-            }
+            #region Password
+            IValidator validator = _validatorFactory.PasswordValidator;
+            IEnumerable<IValidation> passwordValidations = validator.GetValidations();
             foreach (var v in passwordValidations)
             {
                 if (!v.IsValid(user.Password, errors))
@@ -94,8 +71,8 @@ namespace BLL.Security
             }  
             #endregion
 
-            #region username
-            validator = _validatorsEngine.UsernameValidator;
+            #region Username
+            validator = _validatorFactory.UsernameValidator;
             IEnumerable<IValidation> usernameValidations = validator.GetValidations();
             foreach (var v in usernameValidations)
             {
@@ -104,8 +81,8 @@ namespace BLL.Security
             } 
             #endregion
 
-            #region names
-            validator = _validatorsEngine.NameValidator;
+            #region Names
+            validator = _validatorFactory.NameValidator;
             IEnumerable<IValidation> nameValidations = validator.GetValidations();
             foreach (var v in nameValidations)
             {
@@ -119,8 +96,8 @@ namespace BLL.Security
             } 
             #endregion
 
-            #region email
-            validator = _validatorsEngine.EmailValidator;
+            #region Email
+            validator = _validatorFactory.EmailValidator;
             IEnumerable<IValidation> emailValidations = validator.GetValidations();
             foreach (var v in emailValidations)
             {

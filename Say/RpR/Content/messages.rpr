@@ -3,43 +3,45 @@
 	<head>
 		<title>Say</title>
 		<meta http-equiv="Content-Type" content = "text/html; charset = utf-8" />
-		<link rel="stylesheet" href="css/say_main.css">
+		<link rel="stylesheet" href="Content/css/say_main.css">
 	</head>
 	<body>
 		<div id="body-wrapper">
 			<div id="header">
 				<hr />
 				<ul id="header-item-menu">
-					<li><a href="index.jhtm">Messages</a></li>
-					<li><a href="#">Profile</a></li>
-					<li><a href="friends.jhtm">Friends</a></li>
-					<li><a href="#">Logout</a></li>
+					<li><a href="messages.rpr">Messages</a></li>
+					<li><a href="profile.rpr">Profile</a></li>
+					<li><a href="friends.rpr">Friends</a></li>
+					<li><a href="logout.rpr">Logout</a></li>
 				</ul>
 				<hr />
 			</div>
+
 			<div id="main">
 				<ul id="messages">
 					<li class="messages-item">
 						<span class="messages-name">Mary Patsyna</span>
-						<img class="messages-picture" src="image/mary.jpg" />
+						<img class="messages-picture" src="Content/images/mary.jpg" />
 						<a class="messages-last" href="#">Last message from the first user</a>
 					</li>
 
 					<li  class="messages-item">
 						<span class="messages-name">Vladlen Babitski</span>
-						<img class="messages-picture" src="image/vladlen.jpg" />
+						<img class="messages-picture" src="Content/images/vladlen.jpg" />
 						<a class="messages-last" href="#">Hello! How are you?</a>
 					</li>
 
 					<li  class="messages-item">
 						<span class="messages-name">Andy Larkin</span>
-						<img class="messages-picture" src="image/andy.jpg" />
+						<img class="messages-picture" src="Content/images/andy.jpg" />
 						<a class="messages-last" href="#">
 							When will you go at work?
 						</a>
 					</li>
 				<ul>
 			</div>
+			
 			<div id="footer">
 				<hr />
 			    <address><a href = "#" target = "_blank">Babitski Vladlen</a></address>

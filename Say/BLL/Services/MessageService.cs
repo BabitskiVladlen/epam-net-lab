@@ -12,26 +12,16 @@ namespace BLL.Services
 {
     public class MessageService : IMessageService
     {
+        #region Fields&Props
         private readonly IMessageRepository _messageRepository;
-        private readonly IUserService _userService;
+        private readonly IUserService _userService; 
+        #endregion
 
         #region .ctors
-        public MessageService()
-            : this(DependencyResolution.Kernel.Get<IMessageRepository>(), new UserService())
-        { }
-
-        public MessageService(IMessageRepository messageRepository)
-            : this(messageRepository, new UserService())
-        { }
-
-        public MessageService(IMessageRepository messageRepository, IUserService userService)
+        public MessageService(IMessageRepository messageRepository = null, IUserService userService = null)
         {
-            if (messageRepository == null)
-                throw new ArgumentNullException("Repository is null", (Exception)null);
-            if (userService == null)
-                throw new ArgumentNullException("Service is null", (Exception)null);
-            _messageRepository = messageRepository;
-            _userService = userService;
+            _messageRepository = messageRepository ?? DependencyResolution.Kernel.Get<IMessageRepository>();
+            _userService = userService ?? new UserService();
         } 
         #endregion
 
@@ -70,6 +60,7 @@ namespace BLL.Services
         public void DisableMessage(int messageID)
         {
             MessageEntity message = GetMessageByID(messageID);
+            if (message == null) return;
             message.IsDeleted = true;
             SaveMessage(message);
             try
@@ -84,6 +75,7 @@ namespace BLL.Services
         public void EnableMessage(int messageID)
         {
             MessageEntity message = GetMessageByID(messageID);
+            if (message == null) return;
             message.IsDeleted = false;
             SaveMessage(message);
             try
@@ -117,9 +109,11 @@ namespace BLL.Services
 
         private void SetCountOfUserMessages(MessageEntity message, bool add)
         {
+            if (message == null) return;
             if (message.IsNew)
             {
                 User user = _userService.GetUserByID(message.ToUser);
+                if (user == null) return;
                 if (add) ++user.NewMessages;
                 else --user.NewMessages;
                 _userService.SaveUser(user);

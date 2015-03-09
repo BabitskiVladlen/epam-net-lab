@@ -1,15 +1,19 @@
-﻿using DAL.Entities;
+﻿#region using
+using DAL.Entities;
 using System;
 using System.Net;
-using System.Net.Mail;
+using System.Net.Mail; 
+#endregion
 
 namespace BLL.Tools
 {
     public class EmailProcessor
     {
+        #region Fields&Props
         private EmailSettings settings;
         private User _fromUser;
-        public User _toUser;
+        public User _toUser; 
+        #endregion
 
         #region .ctors
         public EmailProcessor(User fromUser, User toUser, string email)
@@ -28,6 +32,8 @@ namespace BLL.Tools
         #region Send
         public bool Send(string message)
         {
+            throw new NotImplementedException();
+
             if (String.IsNullOrEmpty(message) || String.IsNullOrWhiteSpace(message))
                 throw new ArgumentNullException("Message is null or empty", (Exception)null);
 
@@ -39,9 +45,7 @@ namespace BLL.Tools
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = new NetworkCredential(settings.Username, settings.Password);
 
-                string str = "Hello, dear " + _toUser.FirstName + "! "
-                    + _fromUser.FirstName + " " + _fromUser.Surname +
-                    " has writed a message to you" + Environment.NewLine + Environment.NewLine;
+                string str = String.Empty;
                 MailMessage mailMessage = new MailMessage(settings.From, settings.To, "Say Social Network", str + message);
                 smtpClient.Send(mailMessage);
                 return true;
@@ -56,11 +60,11 @@ namespace BLL.Tools
         internal EmailSettings(string to)
         {
             To = to;
-            Server = "smtp.mail.ru";
-            From = "SaySocialNetwork@mail.ru";
+            Server = String.Empty;
+            From = String.Empty;
             SSL = true;
-            Username = "SaySocialNetwork@mail.ru";
-            Password = "say_rpr2782451UIjka";
+            Username = String.Empty;
+            Password = String.Empty;
             Port = 2525;
         }
 

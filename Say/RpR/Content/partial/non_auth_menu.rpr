@@ -1,0 +1,4 @@
+<ul id="header-item-menu">
+	<li><a href="signIn.rpr">Sign In</a></li>
+	<li><a href="registration.rpr">Sign Up</a></li>
+</ul>

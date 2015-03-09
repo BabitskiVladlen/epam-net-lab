@@ -13,7 +13,9 @@ namespace BLL
 {
     public class DependencyResolution
     {
-        public static readonly IKernel Kernel;
+        #region Fields&Props
+        public static readonly IKernel Kernel; 
+        #endregion
 
         #region .ctors
         static DependencyResolution()

@@ -12,18 +12,14 @@ namespace BLL.Services
 {
     public class RoleService : IRoleService
     {
-        private readonly IRoleRepository _roleRepository;
+        #region Fields&Props
+        private readonly IRoleRepository _roleRepository; 
+        #endregion
 
         #region .ctors
-        public RoleService()
-            : this(DependencyResolution.Kernel.Get<IRoleRepository>())
-        { }
-
-        public RoleService(IRoleRepository roleRepository)
+        public RoleService(IRoleRepository roleRepository = null)
         {
-            if (roleRepository == null)
-                throw new ArgumentNullException("Repository is null", (Exception)null);
-            _roleRepository = roleRepository;
+            _roleRepository = roleRepository ?? DependencyResolution.Kernel.Get<IRoleRepository>();
         } 
         #endregion
 

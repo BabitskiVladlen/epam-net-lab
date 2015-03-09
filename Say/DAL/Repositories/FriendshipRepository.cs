@@ -1,15 +1,19 @@
-﻿using DAL.Contexts;
+﻿#region using
+using DAL.Contexts;
 using DAL.Entities;
 using DAL.Infrastructure;
 using DAL.Validators;
 using System;
-using System.Linq;
+using System.Linq; 
+#endregion
 
 namespace DAL.Repositories
 {
     public class FriendshipRepository : IFriendshipRepository
     {
-        private readonly EfDbContext _context = new EfDbContext();
+        #region Fields&Props
+        private readonly EfDbContext _context = new EfDbContext(); 
+        #endregion
 
         #region Friendships
         public IQueryable<Friendship> Friendships
@@ -29,7 +33,7 @@ namespace DAL.Repositories
         public void SaveFriendship(Friendship friendship)
         {
             Friendship exFriendship;
-            try { Validator.FriendshipValidator(friendship, out exFriendship); }
+            try { exFriendship = Validator.FriendshipValidator(friendship); }
             catch (ArgumentException exc)
             { throw exc; }
 

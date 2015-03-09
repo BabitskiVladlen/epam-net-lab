@@ -1,15 +1,20 @@
-﻿using DAL.Contexts;
+﻿#region using
+using DAL.Contexts;
 using DAL.Entities;
 using DAL.Infrastructure;
 using DAL.Validators;
 using System;
-using System.Linq;
+using System.IO;
+using System.Linq; 
+#endregion
 
 namespace DAL.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private readonly EfDbContext _context = new EfDbContext();
+        #region Fields&Props
+        private readonly EfDbContext _context = new EfDbContext(); 
+        #endregion
 
         #region Users
         public IQueryable<User> Users
@@ -29,14 +34,17 @@ namespace DAL.Repositories
         public void SaveUser(User user)
         {
             User exUser;
-            try { Validator.UserValidator(user, out exUser); }
+            try { exUser = Validator.UserValidator(user); }
             catch (ArgumentException exc)
             { throw exc; }
 
             if (user.UserID == 0)
                 _context.Users.Add(user);
+            
             else if (exUser != null)
             {
+                exUser = GetUserByID(user.UserID);
+                exUser.UserID = user.UserID;
                 exUser.Username = user.Username;
                 exUser.FirstName = user.FirstName;
                 exUser.Surname = user.Surname;
@@ -46,7 +54,7 @@ namespace DAL.Repositories
                 exUser.IsDeleted = user.IsDeleted;
                 exUser.Image = user.Image;
                 exUser.CompressedImage = user.CompressedImage;
-                exUser.ImageMimeType = exUser.ImageMimeType;
+                exUser.ImageMimeType = user.ImageMimeType;
                 exUser.NewFriends = user.NewFriends;
                 exUser.NewMessages = user.NewMessages;
             }

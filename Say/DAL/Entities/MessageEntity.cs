@@ -1,6 +1,8 @@
-﻿using System;
+﻿#region using
+using System;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations.Schema; 
+#endregion
 
 namespace DAL.Entities
 {

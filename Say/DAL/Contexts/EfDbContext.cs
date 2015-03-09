@@ -1,5 +1,7 @@
-﻿using DAL.Entities;
-using System.Data.Entity;
+﻿#region using
+using DAL.Entities;
+using System.Data.Entity; 
+#endregion
 
 namespace DAL.Contexts
 {

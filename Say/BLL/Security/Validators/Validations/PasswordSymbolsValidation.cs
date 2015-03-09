@@ -1,6 +1,8 @@
-﻿using BLL.Security.Infrastructure;
+﻿#region using
+using BLL.Security.Infrastructure;
 using System;
-using System.Collections.Generic;
+using System.Collections.Generic; 
+#endregion
 
 namespace BLL.Security.Validators
 {

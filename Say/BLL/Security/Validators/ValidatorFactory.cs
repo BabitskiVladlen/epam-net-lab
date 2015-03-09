@@ -1,5 +1,7 @@
-﻿using BLL.Security.Infrastructure;
-using System;
+﻿#region using
+using BLL.Security.Infrastructure;
+using System; 
+#endregion
 
 namespace BLL.Security.Validators
 {
@@ -9,13 +11,6 @@ namespace BLL.Security.Validators
         public IValidator PasswordValidator
         {
             get { return new PasswordValidator(); }
-        } 
-        #endregion
-
-        #region AdminPasswordValidator
-        public IValidator AdminPasswordValidator
-        {
-            get { return new AdminPasswordValidator(); }
         } 
         #endregion
 

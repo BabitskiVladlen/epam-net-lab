@@ -1,68 +1,40 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Say</title>
-		<meta http-equiv="Content-Type" content = "text/html; charset = utf-8" />
-		<link rel="stylesheet" href="Content/css/say_main.css">
-	</head>
-	<body>
-		<div id="body-wrapper">
-			<div id="header">
-				<hr />
-				<ul id="header-item-menu">
-					<li><a href="index.rpr">Messages</a></li>
-					<li><a href="#">Profile</a></li>
-					<li><a href="friends.rpr">Friends</a></li>
-					<li><a href="#">Logout</a></li>
-				</ul>
-				<hr />
-			</div>
-			<div id="main">
-                <p id="validation"></p>
-                <form id="registration" name="registration" action="registration.rpr" method="post">
-                        <div>
-                            <h2>Registration</h2>
-                            <hr />
-                        </div>
+<div id="info">
+[info/]
+</div>
+<form  id="registration-form" action="registration.rpr" method="post">
+    <table>
+        <caption>Registration</caption>
+        <tr>
+            <td>First name</td>
+            <td><input class="textbox" name="firstname" type="text" value="[firstname/]" /></td>
+        </tr>
+                        
+        <tr>
+            <td>Surname</td>
+            <td><input class="textbox" name="surname" type="text" value="[surname/]" /></td>
+        </tr>
 
-                        <div>
-                            <p>First name</p>
-                            <input class="textbox" id="firstname" name="firstname" type="text" value="" />
-                        </div>
+        <tr>
+            <td>Username</td>
+            <td><input class="textbox" name="username" type="text" value="[username/]" /></td>
+        </tr>
 
-                        <div>
-                            <p>Surname</p>
-                            <input class="textbox" id="surname" name="surname" type=""text"" value="" />
-                        </div>
+        <tr>
+            <td>Password</td>
+            <td><input class="textbox" name="password" type="password" value="" /></td>
+        </tr>
+                        
+        <tr>
+            <td>Password again</td>
+            <td><input class="textbox" name="passwordagain" type="password" value="" /></td>
+        </tr>
 
-                        <div>
-                            <p>Username</p>
-                            <input class=""textbox"" id=""username"" name=""username"" type=""text"" value="" />
-                        </div>
+        <tr>
+            <td>Email</td>
+            <td><input class="textbox" name="email" type="text" value="[email/]" /></td>
+        </tr>
 
-                        <div>
-                            <p>Password</p>
-                            <input class="textbox" id="password" name="password" type="password" value="" />
-                        </div>
+        <tr><td><input class="button" value="OK" type="submit" /></td></tr>
+    </table>
+</form>
 
-                        <div>
-                            <p>password again</p>
-                            <input class="textbox" id="passwordAgain" name="passwordAgain" type="password" value="" />
-                        </div>
-
-                        <div>
-                            <p>Email</p>
-                            <input class="textbox" id="email" name="email" type="text" value="" />
-                        </div>
-
-                        <div>
-                        <input type="submit" value="Register"" class="button" id="reg_button"/>
-                    </div>
-                </form> 
-			<div id="footer">
-				<hr />
-			    <address><a href = "#" target = "_blank">Babitski Vladlen</a></address>
-			</div>
-		</div>
-	</body>
-</html>

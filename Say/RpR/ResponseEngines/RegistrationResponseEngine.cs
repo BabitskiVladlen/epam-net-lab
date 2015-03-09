@@ -1,23 +1,41 @@
-﻿using RpR.ResponseEngines.Infrastructure;
-using System;
+﻿#region using
+using RpR.RequestEngines.Infrastructure;
+using RpR.ResponseEngines.Infrastructure;
 using System.Collections.Generic;
+
+#endregion
 
 namespace RpR.ResponseEngines
 {
-    public class RegistrationResponseEngine : ResponseEngine
+    public class RegistrationResponseEngine : LayoutResponseEngine
     {
-        public void GetResponse(dynamic model, Tuple<string, IEnumerable<string>> errors)
+        #region .ctors
+        public RegistrationResponseEngine(RequestEngine requestEngine,
+            IResponse response = null, IResponseStrategies responseStrategies = null)
+            : base(requestEngine, response, responseStrategies)
+        { } 
+        #endregion
+
+        #region PrepareContent
+        public override void PrepareContent()
         {
-            if (IsAjax)
+            if (Stash.Count != 0)
             {
-                AjaxResponse(errors, model);
-                return;
+                Model = Stash["model"];
+                Info.Add(Stash["info"]);
             }
-        }
 
-        private void AjaxResponse(dynamic model, Tuple<string, IEnumerable<string>> errors)
-        {
-
+            Dictionary<string, string> placesValues = PropsToDictionary(Model);
+            string target = IsAuthenticated ? "profile.rpr" : "registration.rpr";
+            string content = ResponseStrategies.GetByRoutes(target, (string)null);
+            content = ResponseStrategies.SetInfo(content, Info, "info");
+            content = ResponseStrategies.BindContent(content, placesValues);
+            if (IsAjax)
+                ContentType = "application/json";
+            else
+                content = ResponseStrategies.GetContent(Layout, content, "main");
+            Content = content;
         }
+        #endregion
     }
 }

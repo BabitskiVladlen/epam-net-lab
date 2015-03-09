@@ -3,21 +3,24 @@ using RpR.Infrastructure;
 using System;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Linq;
 using System.Reflection;
-using System.Web; 
+using System.Web;
 #endregion
 
 namespace RpR.ModelBinders
 {
     public class ModelBinder : IModelBinder
     {
-        private readonly HttpContext _currentContext;
+        #region Fields&Props
+        private readonly HttpContext _httpContext; 
+        #endregion
 
-        #region .ctor
+        #region .ctors
         public ModelBinder()
         {
-            _currentContext = HttpContext.Current;
-            if (_currentContext == null)
+            _httpContext = HttpContext.Current;
+            if (_httpContext == null)
                 throw new InvalidOperationException("Current http-context is null", (Exception)null);
         }
         #endregion
@@ -27,38 +30,11 @@ namespace RpR.ModelBinders
         {
             if (parameters == null)
                 throw new ArgumentNullException("Array of parameters is null", (Exception)null);
-            if (parameters.Length == 0) return null;
+            if (parameters.Length == 0) return new object[0];
 
-            #region InitParamsValues
-            object[] paramValues = new object[parameters.Length];
-            for (int i = 0; i < parameters.Length; ++i)
-            {
-                    HttpFileCollection fileColl = _currentContext.Request.Files;
-                    if (parameters[i].ParameterType == typeof(string))
-                        paramValues[i] = Activator.CreateInstance(parameters[i].ParameterType, String.Empty.ToCharArray());
-                    else if ((parameters[i].ParameterType.IsAssignableFrom(typeof(HttpPostedFileBase))))
-                    {
-                        if (fileColl != null && fileColl.Count > 0)
-                            paramValues[i] = Activator.CreateInstance(parameters[i].ParameterType,
-                                new[] { new HttpPostedFileWrapper(fileColl[0]) });
-                        else paramValues[i] = null;
-                    }
-                    else if ((parameters[i].ParameterType.IsAssignableFrom(typeof(HttpFileCollection))))
-                        paramValues[i] = fileColl;
-                    else
-                        try
-                        {
-                            paramValues[i] = Activator.CreateInstance(parameters[i].ParameterType);
-                        }
-                        catch
-                        {
-                            paramValues[i] = null;
-                        }
-            }
+            object[] paramValues = InitParamValues(parameters, httpCollection);
             if ((httpCollection == null) || (httpCollection.Count == 0)) return paramValues; 
-            #endregion
 
-            #region Binding
             TypeConverter converter;
             for (int i = 0; i < parameters.Length; ++i)
             {
@@ -80,9 +56,40 @@ namespace RpR.ModelBinders
                     else
                         TryPropertyBinder(paramValues[i], key, httpCollection[key]);
                 }
-            } 
-            #endregion
+            }
 
+            return paramValues;
+        } 
+        #endregion
+
+        #region InitParamValues
+        private object[] InitParamValues(ParameterInfo[] parameters, NameValueCollection httpCollection)
+        {
+            object[] paramValues = new object[parameters.Length];
+            HttpFileCollection fileColl = _httpContext.Request.Files;
+            for (int i = 0; i < parameters.Length; ++i)
+            {
+                if (parameters[i].ParameterType == typeof(string))
+                    paramValues[i] = Activator.CreateInstance(parameters[i].ParameterType, String.Empty.ToCharArray());
+                else if ((parameters[i].ParameterType.IsAssignableFrom(typeof(HttpPostedFileBase))) &&
+                    (fileColl != null) && (fileColl.Count != 0))
+                    paramValues[i] = new HttpPostedFileWrapper(fileColl[0]);
+                else if ((parameters[i].ParameterType.IsAssignableFrom(typeof(HttpFileCollection))))
+                    paramValues[i] = fileColl;
+                else
+                    try
+                    {
+                        paramValues[i] = Activator.CreateInstance(parameters[i].ParameterType);
+                    }
+                    catch
+                    {
+                        paramValues[i] = null;
+                    }
+                if (parameters[i].IsOptional &&
+                    httpCollection.AllKeys.FirstOrDefault(k =>
+                        String.Equals(k, parameters[i].Name, StringComparison.InvariantCultureIgnoreCase)) == null)
+                    paramValues[i] = parameters[i].DefaultValue;                    
+            }
             return paramValues;
         } 
         #endregion

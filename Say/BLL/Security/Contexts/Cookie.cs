@@ -1,6 +1,8 @@
-﻿using System;
+﻿#region using
+using System;
 using System.Web;
-using System.Web.Security;
+using System.Web.Security; 
+#endregion
 
 namespace BLL.Security
 {
@@ -16,31 +18,30 @@ namespace BLL.Security
                 throw new ArgumentNullException("Data is null or empty", (Exception)null);
             if (String.IsNullOrEmpty(cookieName) || String.IsNullOrWhiteSpace(cookieName))
                 throw new ArgumentNullException("CookieName is null or empty", (Exception)null);
-            if (context == null)
-                throw new ArgumentNullException("Context is null.", (Exception)null);
 
             FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(
                 1,
                 data,
                 DateTime.Now,
-                DateTime.Now.Add(FormsAuthentication.Timeout),
+                DateTime.Now.Add(TimeSpan.FromDays(365)),
                 isPersistent,
                 String.Empty,
                 FormsAuthentication.FormsCookiePath);
             string secreticket = FormsAuthentication.Encrypt(ticket);
             HttpCookie AuthCookie = new HttpCookie(cookieName, secreticket);
-            AuthCookie.Expires = DateTime.Now.Add(FormsAuthentication.Timeout);
+            AuthCookie.Expires = DateTime.Now.Add(TimeSpan.FromDays(365));
             context.Response.Cookies.Set(AuthCookie);
         } 
         #endregion
 
         #region Read
-        public static FormsAuthenticationTicket Read(string cookieName, HttpContext context)
+        public static FormsAuthenticationTicket Read(string cookieName)
         {
+            HttpContext context = HttpContext.Current;
+            if (context == null)
+                throw new InvalidOperationException("Current http-context is null", (Exception)null);
             if (String.IsNullOrEmpty(cookieName) || String.IsNullOrWhiteSpace(cookieName))
                 throw new ArgumentNullException("CookieName is null or empty", (Exception)null);
-            if (context == null)
-                throw new ArgumentNullException("Context is null", (Exception)null);
 
             FormsAuthenticationTicket ticket = null;
             HttpCookie userCookie = context.Request.Cookies[cookieName];

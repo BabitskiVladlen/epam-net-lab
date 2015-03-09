@@ -2,6 +2,6 @@
 {
     public interface IRequestEngineFactory
     {
-        void CreateEngine(string target);
+        void CreateRequestEngine(string target);
     }
 }

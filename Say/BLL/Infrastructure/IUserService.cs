@@ -1,6 +1,8 @@
-﻿using DAL.Entities;
+﻿#region using
+using DAL.Entities;
 using System.Collections.Generic;
-using System.IO;
+using System.IO; 
+#endregion
 
 namespace BLL.Infrastructure
 {
@@ -8,7 +10,8 @@ namespace BLL.Infrastructure
     {
         IEnumerable<User> Users { get; }
         User GetUserByID(int userID);
-        bool IsExist(string selector);
+        User GetUserByID(string userID);
+        User GetUser(IEnumerable<string> selector);
         void SaveUser(User user);
         void DeleteUser(int userID);
         void DisableUser(int userID);

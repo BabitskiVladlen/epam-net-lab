@@ -1,10 +1,12 @@
-﻿using DAL.Entities;
+﻿#region using
+using DAL.Entities; 
+#endregion
 
 namespace BLL.Security.Infrastructure
 {
     public interface IAuthentication
     {
-        User Login(string name, string password);
+        User SignIn(string name, string password);
         void Logout();
     }
 }

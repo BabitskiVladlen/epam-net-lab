@@ -1,0 +1,6 @@
+<ul id="header-item-menu">
+	<li><a href="messages.rpr">Messages [messages/]</a></li>
+	<li><a href="profile.rpr">Profile</a></li>
+	<li><a href="friends.rpr">Friends [friends/]</a></li>
+	<li><a href="logout.rpr">Logout</a></li>
+</ul>

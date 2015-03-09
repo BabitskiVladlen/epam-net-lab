@@ -1,5 +1,6 @@
 ﻿#region using
 using BLL.Infrastructure;
+using BLL.Security;
 using BLL.Security.Infrastructure;
 using DAL.Entities;
 using Ninject;
@@ -7,10 +8,10 @@ using RpR.Mappers;
 using RpR.Models;
 using RpR.RequestEngines.Infrastructure;
 using RpR.ResponseEngines;
-using System;
+using RpR.ResponseEngines.Infrastructure;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web; 
+using System.Web;
 #endregion
 
 
@@ -18,39 +19,53 @@ namespace RpR.RequestEngines
 {
     public class RegistrationRequestEngine : RequestEngine
     {
-        public void Get(UserModel model, HttpPostedFileBase image)
-        {
-            IUserService userSevice = DependencyResolution.Kernel.Get<IUserService>();
-            IRegistration registration = DependencyResolution.Kernel.Get<IRegistration>();
+        #region Fields&Props
+        private readonly IUserService _userService;
+        private readonly IRoleService _roleService;
+        #endregion
 
-            #region AddNewUser
-            User user = DefaultMapper.GetUser(model);
-            user.Role = 2;
-            bool ok = registration.TryAddUser(user, model.PasswordAgain, Errors);
+        #region .ctors
+        public RegistrationRequestEngine()
+            : this(DependencyResolution.Kernel.Get<IUserService>(),
+            DependencyResolution.Kernel.Get<IRoleService>())
+        { }
+
+        public RegistrationRequestEngine(IUserService userService, IRoleService roleService)
+        {
+            _userService = userService ?? DependencyResolution.Kernel.Get<IUserService>();
+            _roleService = roleService ?? DependencyResolution.Kernel.Get<IRoleService>();
+        }
+        #endregion
+
+        #region Get
+        public ResponseEngine Get()
+        {
+            if (IsAuthenticated)
+                return new NotFoundResponseEngine(this);
+            return new RegistrationResponseEngine(this) { Model = new UserModel() };
+        } 
+        #endregion
+
+        #region Post
+        public ResponseEngine Post(UserModel model, HttpPostedFileBase image)
+        {
+            if (IsAuthenticated)
+                return new NotFoundResponseEngine(this);
+
+            IRegistration registration = new DefaultRegistration(_userService);
+            List<string> info = new List<string>();
+            User  newUser = DefaultMappers.GetUser(model, null);
+
+            if (registration.TryAddUser(newUser, model.PasswordAgain, info))
+                info.Add("Welcome to Say! You can upload your profile picture now");
+
+            LayoutResponseEngine responseEngine = new RegistrationResponseEngine(this);
             model.Password = null;
             model.PasswordAgain = null;
-            #endregion
-
-            #region SaveImage
-            if (ok && (image != null))
-            {
-                try
-                {
-                    int userID =
-                        userSevice.Users.FirstOrDefault(u => (u.Username == user.Username)).UserID;
-                    userSevice.SaveImage(userID, image.InputStream, image.ContentType);
-                }
-                catch (Exception exc)
-                {
-                    LogMessage.Add(exc, Level.Error);
-                    Errors.Add("It cannot save an image");
-                }
-            }
-            #endregion
-
-            new RegistrationResponseEngine().GetResponse(model,
-                new Tuple<string, IEnumerable<string>>
-                    ("validation", Errors.Distinct(EqualityComparer<string>.Default)));
+            responseEngine.Model = model;
+            responseEngine.Info.AddRange(info.Distinct(EqualityComparer<string>.Default));
+            return responseEngine;
         }
+        #endregion
     }
 }

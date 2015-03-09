@@ -10,8 +10,10 @@ namespace BLL.Security.Contexts
 {
     public class MockContext : IAppContext
     {
+        #region Fields&Props
         private IPrincipal _user = new DefaultPrincipal(null, null);
-        private IUserService _userService;
+        private IUserService _userService; 
+        #endregion
 
         #region .ctors
         public MockContext(IUserService userService)

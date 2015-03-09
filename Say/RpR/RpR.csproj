@@ -76,13 +76,26 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Content\error.rpr" />
+    <Content Include="Content\images\background.png" />
+    <Content Include="Content\images\base.png" />
     <Content Include="packages.config" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\friends.rpr" />
-    <Content Include="Content\registration.rpr" />
-    <Content Include="Content\index.rpr" />
+    <Content Include="Content\registration.rpr">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\messages.rpr" />
+    <Content Include="Content\partial\menu.rpr" />
+    <Content Include="Content\partial\non_auth_menu.rpr" />
+    <Content Include="index.rpr" />
+    <Content Include="Content\profile.rpr">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\notfound.rpr" />
+    <Content Include="Content\error.html" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -106,19 +119,28 @@
     <Compile Include="Infrastructure\IMethodInvoker.cs" />
     <Compile Include="Infrastructure\IModelBinder.cs" />
     <Compile Include="Infrastructure\IRequestEngineFactory.cs" />
-    <Compile Include="JsonEntities\CoreJsonEntity.cs" />
     <Compile Include="LogMessage.cs" />
-    <Compile Include="Mappers\DefaultMapper.cs" />
+    <Compile Include="Mappers\DefaultMappers.cs" />
     <Compile Include="MethodInvokers\MethodInvoker.cs" />
     <Compile Include="ModelBinders\ModelBinder.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequestEnginesFactory\RequestEngineFactory.cs" />
+    <Compile Include="RequestEnginesFactories\RequestEngineFactory.cs" />
+    <Compile Include="RequestEngines\Infrastructure\NotFoundRequestEngine.cs" />
+    <Compile Include="RequestEngines\PictureRequestEngine.cs" />
+    <Compile Include="RequestEngines\ProfileRequestEngine.cs" />
     <Compile Include="RequestEngines\RegistrationRequestEngine.cs" />
-    <Compile Include="ResponseEngines\Infrastructure\ResponseEngine.cs" />
+    <Compile Include="ResponseEngines\Infrastructure\ContentResponseEngine.cs" />
+    <Compile Include="ResponseEngines\Infrastructure\FileResponseEngine.cs" />
     <Compile Include="ResponseEngines\Infrastructure\IResponse.cs" />
+    <Compile Include="ResponseEngines\Infrastructure\NotFoundResponseEngine.cs" />
+    <Compile Include="ResponseEngines\Infrastructure\RedirectResponseEngine.cs" />
+    <Compile Include="ResponseEngines\Infrastructure\ResponseEngine.cs" />
+    <Compile Include="ResponseEngines\Infrastructure\IResponseStrategies.cs" />
+    <Compile Include="ResponseEngines\LayoutResponseEngine.cs" />
     <Compile Include="ResponseEngines\RegistrationResponseEngine.cs" />
-    <Compile Include="ResponseEngines\Response.cs" />
+    <Compile Include="ResponseEngines\Infrastructure\Response.cs" />
+    <Compile Include="ResponseEngines\Infrastructure\ResponseStrategies.cs" />
     <Compile Include="RequestEngines\Infrastructure\RequestEngine.cs" />
     <Compile Include="RprAsyncHandler.cs" />
   </ItemGroup>
@@ -132,7 +154,9 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="JsonEntities\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

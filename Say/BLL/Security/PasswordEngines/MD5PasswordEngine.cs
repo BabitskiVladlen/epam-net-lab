@@ -1,11 +1,13 @@
-﻿using BLL.Security.Infrastructure;
+﻿#region using
+using BLL.Security.Infrastructure;
 using System;
 using System.Security.Cryptography;
-using System.Text;
+using System.Text; 
+#endregion
 
 namespace BLL.Security.PasswordEngines
 {
-    public class PasswordEngineMD5 : IPasswordEngine
+    public class MD5PasswordEngine : IPasswordEngine
     {
         #region Create
         public string Create(string plainText)
@@ -21,7 +23,7 @@ namespace BLL.Security.PasswordEngines
         {
 
             if (String.IsNullOrEmpty(password) || String.IsNullOrWhiteSpace(password))
-                throw new ArgumentNullException("Password is null or empty", (Exception)null);
+                throw new ArgumentNullException("Plain text is null or empty", (Exception)null);
             if (String.IsNullOrEmpty(plainText) || String.IsNullOrWhiteSpace(plainText))
                 throw new ArgumentNullException("Password is null or empty", (Exception)null);
 

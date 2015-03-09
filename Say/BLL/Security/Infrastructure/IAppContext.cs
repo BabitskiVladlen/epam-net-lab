@@ -1,5 +1,7 @@
-﻿using DAL.Entities;
-using System.Security.Principal;
+﻿#region using
+using DAL.Entities;
+using System.Security.Principal; 
+#endregion
 
 namespace BLL.Security.Infrastructure
 {

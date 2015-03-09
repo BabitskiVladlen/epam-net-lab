@@ -1,6 +1,8 @@
-﻿using DAL.Entities;
+﻿#region using
+using DAL.Entities;
 using DAL.Infrastructure;
-using System.Collections.Generic;
+using System.Collections.Generic; 
+#endregion
 
 namespace BLL.Infrastructure
 {

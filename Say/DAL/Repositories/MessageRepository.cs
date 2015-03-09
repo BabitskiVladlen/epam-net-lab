@@ -1,15 +1,19 @@
-﻿using DAL.Contexts;
+﻿#region using
+using DAL.Contexts;
 using DAL.Entities;
 using DAL.Infrastructure;
 using DAL.Validators;
 using System;
-using System.Linq;
+using System.Linq; 
+#endregion
 
 namespace DAL.Repositories
 {
     public class MessageRepository : IMessageRepository
     {
-        private readonly EfDbContext _context = new EfDbContext();
+        #region Fields&Props
+        private readonly EfDbContext _context = new EfDbContext(); 
+        #endregion
 
         #region Messages
         public IQueryable<MessageEntity> Messages
@@ -29,7 +33,7 @@ namespace DAL.Repositories
         public void SaveMessage(MessageEntity message)
         {
             MessageEntity exMessage;
-            try { Validator.MessageValidator(message, out exMessage); }
+            try { exMessage = Validator.MessageValidator(message); }
             catch (ArgumentException exc)
             { throw exc; }
 
