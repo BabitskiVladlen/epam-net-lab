@@ -1,0 +1,6 @@
+SecurityPrompt : Enabled
+RefreshPrompt : Enabled
+RegenerateConfig : Enabled
+ProjectBase:C:\Users\Babitski Vladlen\AppData\Local\Temp\Test Client Projects\12.0
+http://localhost:56923/TodoManager.svc
+http://localhost:4126/Service1.svc

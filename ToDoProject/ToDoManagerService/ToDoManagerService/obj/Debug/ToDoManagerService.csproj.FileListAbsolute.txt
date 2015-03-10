@@ -1,0 +1,23 @@
+D:\Repository\Test tasks\ToDoManagerService\ToDoManagerService\bin\ToDoManagerService.dll.config
+D:\Repository\Test tasks\ToDoManagerService\ToDoManagerService\bin\ToDoManagerService.dll
+D:\Repository\Test tasks\ToDoManagerService\ToDoManagerService\bin\ToDoManagerService.pdb
+D:\Repository\Test tasks\ToDoManagerService\ToDoManagerService\obj\Debug\ToDoManagerService.dll
+D:\Repository\Test tasks\ToDoManagerService\ToDoManagerService\obj\Debug\ToDoManagerService.pdb
+d:\Repository\Test tasks\Slow Backend task\ToDoManagerService\ToDoManagerService\bin\ToDoManagerService.dll.config
+d:\Repository\Test tasks\Slow Backend task\ToDoManagerService\ToDoManagerService\bin\ToDoManagerService.dll
+d:\Repository\Test tasks\Slow Backend task\ToDoManagerService\ToDoManagerService\bin\ToDoManagerService.pdb
+d:\Repository\Test tasks\Slow Backend task\ToDoManagerService\ToDoManagerService\obj\Debug\ToDoManagerService.csprojResolveAssemblyReference.cache
+d:\Repository\Test tasks\Slow Backend task\ToDoManagerService\ToDoManagerService\obj\Debug\ToDoManagerService.dll
+d:\Repository\Test tasks\Slow Backend task\ToDoManagerService\ToDoManagerService\obj\Debug\ToDoManagerService.pdb
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerService\ToDoManagerService\bin\ToDoManagerService.dll.config
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerService\ToDoManagerService\bin\ToDoManagerService.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerService\ToDoManagerService\bin\ToDoManagerService.pdb
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerService\ToDoManagerService\obj\Debug\ToDoManagerService.csprojResolveAssemblyReference.cache
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerService\ToDoManagerService\obj\Debug\ToDoManagerService.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerService\ToDoManagerService\obj\Debug\ToDoManagerService.pdb
+C:\Users\Babitski Vladlen\Documents\ToDoManagerService\ToDoManagerService\bin\ToDoManagerService.dll.config
+C:\Users\Babitski Vladlen\Documents\ToDoManagerService\ToDoManagerService\bin\ToDoManagerService.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerService\ToDoManagerService\bin\ToDoManagerService.pdb
+C:\Users\Babitski Vladlen\Documents\ToDoManagerService\ToDoManagerService\obj\Debug\ToDoManagerService.csprojResolveAssemblyReference.cache
+C:\Users\Babitski Vladlen\Documents\ToDoManagerService\ToDoManagerService\obj\Debug\ToDoManagerService.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerService\ToDoManagerService\obj\Debug\ToDoManagerService.pdb
