@@ -1,0 +1,51 @@
+C:\Users\Александр\Desktop\save\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.dll.config
+C:\Users\Александр\Desktop\save\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.dll
+C:\Users\Александр\Desktop\save\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Александр\Desktop\save\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\EntityFramework.dll
+C:\Users\Александр\Desktop\save\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Александр\Desktop\save\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\EntityFramework.xml
+C:\Users\Александр\Desktop\save\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Александр\Desktop\save\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.dll
+C:\Users\Александр\Desktop\save\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.dll.config
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.dll
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\EntityFramework.dll
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\EntityFramework.xml
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.csprojResolveAssemblyReference.cache
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.dll
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.dll.config
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.dll
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\EntityFramework.dll
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\EntityFramework.xml
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.csprojResolveAssemblyReference.cache
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.dll
+C:\Users\Александр\Desktop\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\ASP.NET.1.Kruklinsky.Project\Domain\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.dll.config
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.pdb
+F:\ToDoManagerClient\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.dll.config
+F:\ToDoManagerClient\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.dll
+F:\ToDoManagerClient\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.pdb
+F:\ToDoManagerClient\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.csprojResolveAssemblyReference.cache
+F:\ToDoManagerClient\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.dll
+F:\ToDoManagerClient\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.dll.config
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.dll.config
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\bin\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\Ambient DbContext\AmbientDbContext.Interface\obj\Debug\AmbientDbContext.Interface.csprojResolveAssemblyReference.cache

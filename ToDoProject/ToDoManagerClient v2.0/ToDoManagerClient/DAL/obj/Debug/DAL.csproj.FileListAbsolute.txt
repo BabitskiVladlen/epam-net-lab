@@ -1,0 +1,64 @@
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\DAL.dll.config
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\DAL.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\DAL.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\AmbientDbContext.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\DAL.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\ORM.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\DAL.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\ORM.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\obj\Debug\DAL.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL\obj\Debug\DAL.pdb
+F:\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\DAL.dll.config
+F:\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\DAL.dll
+F:\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\DAL.pdb
+F:\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\AmbientDbContext.Interface.dll
+F:\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\DAL.Interface.dll
+F:\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\EntityFramework.dll
+F:\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\ORM.dll
+F:\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\AmbientDbContext.Interface.pdb
+F:\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\DAL.Interface.pdb
+F:\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\ORM.pdb
+F:\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\EntityFramework.xml
+F:\ToDoManagerClient\ToDoManagerClient\DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\ToDoManagerClient\ToDoManagerClient\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\ToDoManagerClient\ToDoManagerClient\DAL\obj\Debug\DAL.dll
+F:\ToDoManagerClient\ToDoManagerClient\DAL\obj\Debug\DAL.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\bin\Debug\DAL.dll.config
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\bin\Debug\DAL.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\bin\Debug\DAL.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\bin\Debug\AmbientDbContext.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\bin\Debug\DAL.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\bin\Debug\ORM.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\bin\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\bin\Debug\DAL.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\bin\Debug\ORM.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\obj\Debug\DAL.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL\obj\Debug\DAL.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\bin\Debug\DAL.dll.config
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\bin\Debug\DAL.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\bin\Debug\DAL.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\bin\Debug\AmbientDbContext.Interface.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\bin\Debug\DAL.Interface.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\bin\Debug\ORM.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\bin\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\bin\Debug\DAL.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\bin\Debug\ORM.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\obj\Debug\DAL.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL\obj\Debug\DAL.pdb

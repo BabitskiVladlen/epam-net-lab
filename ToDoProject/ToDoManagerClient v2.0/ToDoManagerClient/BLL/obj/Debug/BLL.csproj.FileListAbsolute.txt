@@ -1,0 +1,74 @@
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\BLL.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\BLL.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\obj\Debug\BLL.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\obj\Debug\BLL.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\AmbientDbContext.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\DAL.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\ToDoManager.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\EntityFramework.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.Mvc.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.Optimization.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.Razor.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.WebPages.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\ToDoManager.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\DAL.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.Mvc.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.Razor.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.WebPages.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.WebPages.Deployment.xml
+F:\ToDoManagerClient\ToDoManagerClient\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\ToDoManagerClient\ToDoManagerClient\BLL\obj\Debug\BLL.dll
+F:\ToDoManagerClient\ToDoManagerClient\BLL\obj\Debug\BLL.pdb
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\BLL.dll
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\BLL.pdb
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\AmbientDbContext.Interface.dll
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\DAL.Interface.dll
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\ToDoManager.dll
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\EntityFramework.dll
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.Optimization.dll
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\Newtonsoft.Json.dll
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.Razor.dll
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.WebPages.Razor.dll
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.WebPages.dll
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.WebPages.Deployment.dll
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\AmbientDbContext.Interface.pdb
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\DAL.Interface.pdb
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\ToDoManager.pdb
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\Newtonsoft.Json.xml
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.Razor.xml
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.WebPages.Razor.xml
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.WebPages.xml
+F:\ToDoManagerClient\ToDoManagerClient\BLL\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\BLL\bin\Debug\BLL.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\BLL\bin\Debug\BLL.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\BLL\bin\Debug\AmbientDbContext.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\BLL\bin\Debug\DAL.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\BLL\bin\Debug\EntityFramework.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\BLL\bin\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\BLL\bin\Debug\DAL.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\BLL\obj\Debug\BLL.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\BLL\obj\Debug\BLL.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\BLL\bin\Debug\BLL.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\BLL\bin\Debug\BLL.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\BLL\bin\Debug\BLL.dll.config
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\BLL\bin\Debug\BLL.dll.config
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\BLL\bin\Debug\BLL.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\BLL\bin\Debug\BLL.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\BLL\bin\Debug\AmbientDbContext.Interface.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\BLL\bin\Debug\BLL.Interface.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\BLL\bin\Debug\DAL.Interface.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\BLL\bin\Debug\EntityFramework.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\BLL\bin\Debug\AmbientDbContext.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\BLL\bin\Debug\BLL.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\BLL\bin\Debug\DAL.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\BLL\obj\Debug\BLL.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\BLL\obj\Debug\BLL.pdb

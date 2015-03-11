@@ -1,0 +1,18 @@
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL.Interface\bin\Debug\DAL.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL.Interface\bin\Debug\DAL.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL.Interface\obj\Debug\DAL.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\DAL.Interface\obj\Debug\DAL.Interface.pdb
+F:\ToDoManagerClient\ToDoManagerClient\DAL.Interface\bin\Debug\DAL.Interface.dll
+F:\ToDoManagerClient\ToDoManagerClient\DAL.Interface\bin\Debug\DAL.Interface.pdb
+F:\ToDoManagerClient\ToDoManagerClient\DAL.Interface\obj\Debug\DAL.Interface.csprojResolveAssemblyReference.cache
+F:\ToDoManagerClient\ToDoManagerClient\DAL.Interface\obj\Debug\DAL.Interface.dll
+F:\ToDoManagerClient\ToDoManagerClient\DAL.Interface\obj\Debug\DAL.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL.Interface\bin\Debug\DAL.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL.Interface\bin\Debug\DAL.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL.Interface\obj\Debug\DAL.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\DAL.Interface\obj\Debug\DAL.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL.Interface\bin\Debug\DAL.Interface.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL.Interface\bin\Debug\DAL.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL.Interface\obj\Debug\DAL.Interface.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL.Interface\obj\Debug\DAL.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\DAL.Interface\obj\Debug\DAL.Interface.csprojResolveAssemblyReference.cache

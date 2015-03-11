@@ -1,0 +1,321 @@
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\AspnetIdentitySample.dll.config
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\AspnetIdentitySample.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\AspnetIdentitySample.pdb
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Antlr3.Runtime.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.SqlServer.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Core.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Owin.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.Host.SystemWeb.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.Security.Cookies.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.Security.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Web.Infrastructure.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Newtonsoft.Json.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Owin.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Helpers.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Mvc.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Optimization.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Razor.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Deployment.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Razor.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\WebGrease.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Antlr3.Runtime.pdb
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.SqlServer.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Core.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Owin.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.Host.SystemWeb.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.Security.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.Security.Cookies.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\Newtonsoft.Json.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Helpers.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Mvc.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Razor.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Deployment.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Razor.xml
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManagerClient.csprojResolveAssemblyReference.cache
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\obj\Debug\AspnetIdentitySample.dll
+d:\Repository\Sandbox\Production issue simulation\ToDoManagerClient\AspnetIdentitySample\obj\Debug\AspnetIdentitySample.pdb
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Antlr3.Runtime.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.SqlServer.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.Security.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Newtonsoft.Json.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Owin.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Helpers.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Mvc.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Optimization.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Razor.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Razor.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\WebGrease.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Antlr3.Runtime.pdb
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.xml
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.SqlServer.xml
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.xml
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.Security.xml
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\Newtonsoft.Json.xml
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Helpers.xml
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Mvc.xml
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Razor.xml
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.xml
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Razor.xml
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManagerClient.csprojResolveAssemblyReference.cache
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.dll.config
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.pdb
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManager.dll
+D:\Projects\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManager.pdb
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.dll.config
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.pdb
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Antlr3.Runtime.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.SqlServer.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Core.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Web.Infrastructure.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Newtonsoft.Json.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Owin.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Helpers.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Mvc.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Optimization.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Razor.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Deployment.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Razor.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\WebGrease.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.Security.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.Security.Cookies.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Antlr3.Runtime.pdb
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.SqlServer.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Core.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Newtonsoft.Json.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Helpers.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Mvc.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Razor.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Deployment.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Razor.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.Security.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Owin.Security.Cookies.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManagerClient.csprojResolveAssemblyReference.cache
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManager.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManager.pdb
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.dll.config
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.pdb
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Antlr3.Runtime.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.SqlServer.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Newtonsoft.Json.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Owin.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Helpers.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Optimization.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Razor.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Razor.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\WebGrease.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Antlr3.Runtime.pdb
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.xml
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.SqlServer.xml
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\Newtonsoft.Json.xml
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Helpers.xml
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Razor.xml
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.xml
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Razor.xml
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManagerClient.csprojResolveAssemblyReference.cache
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManager.dll
+C:\Users\Babitski Vladlen\Documents\ToDoManagerClient\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManager.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManagerClient.csprojResolveAssemblyReference.cache
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManager.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManager.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\Antlr3.Runtime.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\BLL.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\DependencyResolver.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.SqlServer.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\Newtonsoft.Json.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\Ninject.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\Owin.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Helpers.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Mvc.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Optimization.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Razor.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Razor.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\WebGrease.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\AmbientDbContext.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\AmbientDbContext.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\DAL.Interface.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\DAL.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\BLL.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\ORM.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\BLL.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\DependencyResolver.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\Antlr3.Runtime.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.SqlServer.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\Newtonsoft.Json.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\Ninject.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Helpers.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Mvc.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Razor.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Razor.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\AmbientDbContext.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\AmbientDbContext.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\DAL.Interface.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\DAL.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\BLL.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\AspnetIdentitySample\bin\ORM.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.dll.config
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Antlr3.Runtime.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\BLL.Interface.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\DependencyResolver.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.SqlServer.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Newtonsoft.Json.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Ninject.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Owin.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Helpers.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Optimization.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Razor.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Razor.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\WebGrease.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\AmbientDbContext.Interface.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\AmbientDbContext.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\DAL.Interface.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\DAL.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\BLL.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\ORM.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\BLL.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\DependencyResolver.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Antlr3.Runtime.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.SqlServer.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Newtonsoft.Json.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Ninject.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Helpers.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Razor.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Razor.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\AmbientDbContext.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\AmbientDbContext.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\DAL.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\DAL.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\BLL.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\ORM.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManagerClient.csprojResolveAssemblyReference.cache
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManager.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManager.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.dll.config
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManager.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Antlr3.Runtime.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\BLL.Interface.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\DependencyResolver.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.SqlServer.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Newtonsoft.Json.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Ninject.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Owin.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Helpers.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Optimization.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Razor.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Razor.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManagerService.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\WebGrease.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\AmbientDbContext.Interface.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\AmbientDbContext.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\DAL.Interface.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\DAL.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\BLL.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\ORM.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\BLL.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\DependencyResolver.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Antlr3.Runtime.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\EntityFramework.SqlServer.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Newtonsoft.Json.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\Ninject.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Helpers.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.Razor.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\System.Web.WebPages.Razor.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\ToDoManagerService.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\AmbientDbContext.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\AmbientDbContext.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\DAL.Interface.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\DAL.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\BLL.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\bin\ORM.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManager.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManager.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\AspnetIdentitySample\obj\Debug\ToDoManagerClient.csprojResolveAssemblyReference.cache

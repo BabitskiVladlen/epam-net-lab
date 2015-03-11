@@ -1,0 +1,115 @@
+D:\Projects\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.dll.config
+D:\Projects\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.dll
+D:\Projects\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.pdb
+D:\Projects\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\RestSharp.dll
+D:\Projects\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\RestSharp.xml
+D:\Projects\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.csprojResolveAssemblyReference.cache
+D:\Projects\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.dll
+D:\Projects\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.pdb
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.dll.config
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.pdb
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Newtonsoft.Json.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\RestSharp.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Newtonsoft.Json.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\RestSharp.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.csprojResolveAssemblyReference.cache
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.pdb
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.Mvc.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManager.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.Optimization.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManager.pdb
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.Mvc.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.WebPages.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.WebPages.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.Razor.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.Razor.xml
+D:\data\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.dll.config
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\RestSharp.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManager.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManager.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\RestSharp.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.pdb
+F:\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.dll.config
+F:\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.dll
+F:\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.pdb
+F:\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+F:\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.dll
+F:\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+F:\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Newtonsoft.Json.dll
+F:\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\RestSharp.dll
+F:\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.xml
+F:\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+F:\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+F:\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Newtonsoft.Json.xml
+F:\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\RestSharp.xml
+F:\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.dll
+F:\ToDoManagerClient\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.dll.config
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\RestSharp.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\RestSharp.xml
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.dll
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.pdb
+C:\Users\Aliaksandr_Kruklinsk\Desktop\ToDoManagerClient v1.0\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.dll.config
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\ToDoManagerClient.Tests.pdb
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\RestSharp.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\bin\Debug\RestSharp.xml
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.dll
+C:\Users\Babitski Vladlen\Desktop\ToDoProject\ToDoManagerClient v2.0\ToDoManagerClient\ToDoManagerClient.Tests\obj\Debug\ToDoManagerClient.Tests.pdb
