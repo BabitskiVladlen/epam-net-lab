@@ -6,8 +6,8 @@
 		<title></title>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-resource.min.js"></script>
-		<script type="text/javascript" src="js/repo.js"></script>
 		<script type="text/javascript" src="js/init.js"></script>
+		<script type="text/javascript" src="js/repo.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/ajs_task.css" />
 	</head>
 
@@ -19,7 +19,7 @@
 			<input ng-model="query" placeholder="Search">
 			<button ng-click="executeSearch()">Go</button>
 			<hr />
-			<label>Asc: </label><input type="checkbox" checked="checked" name="asc" ng-click="asc()" />
+			<button ng-click="ordHdlr()">Order (by lang)</button>
 			<label>Count: </lable><input type="text" name="limit" ng-model="limit" class="num" />
 			<hr />
 			<table>

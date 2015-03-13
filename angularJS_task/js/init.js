@@ -1,5 +1,3 @@
-
-
 var ajs_task = ajs_task || { };
 ajs_task.app = angular.module("ajs_task", ["ngResource"]);
 
@@ -11,14 +9,14 @@ ajs_task.app.controller("SearchCtrl", ["$scope", "GitHub",
 		$scope.rStars = 0;
 		$scope.rForks = 0;
 		$scope.limit = 10;
-		$scope.order = $scope.repos ? $scope.repos.language : "";
-
-		var isAsc = true;
-		$scope.asc =
+		$scope.repos = [];
+		$scope.order = $scope.repos.language || "";
+		var flag = true;
+		$scope.ordHdlr =
 			function()
 			{
-				isAsc ? $scope.order = -"language" : $scope.order = "language";
-				isAsc = !isAsc;
+				flag ? $scope.order = "-language" : $scope.order = "language";
+				flag = !flag;
 			};
 
 		$scope.executeSearch =
