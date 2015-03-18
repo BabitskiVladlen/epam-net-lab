@@ -3,11 +3,6 @@ table, th , td
   border: 1px solid grey;
   border-collapse: collapse;
   padding: 5px;
-} 
-
-table tr:nth-child(odd)
-{
-  background-color: #f1f1f1;
 }
 
 table
@@ -15,11 +10,15 @@ table
 	word-break: break-all;
 }
 
-table tr:nth-child(even) {
-  background-color: #ffffff;
+table tr:nth-child(odd)
+{
+  background-color: #f1f1f1;
 }
 
-img { width: 100%; }
+table tr:nth-child(even)
+{
+  background-color: #ffffff;
+}
 
 td:nth-child(1) { width: 150px; }
 td:nth-child(2) { width: 170px; }
@@ -27,6 +26,8 @@ td:nth-child(3) { width: 85px; }
 td:nth-child(4) { width: 85px; }
 td:nth-child(5) { width: 90px; }
 td:nth-child(6) { width: 250px; }
+
+img { width: 100%; }
 
 a
 {

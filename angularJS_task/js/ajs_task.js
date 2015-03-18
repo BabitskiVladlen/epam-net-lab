@@ -127,6 +127,7 @@ ajs_task.app.controller("DetailCtrl",
 					{
 						prepare();
 						data.language = data.language || "";
+						data.description = data.description || "";
 						var resposne =
 						"<table>" +
 							"<tr>" +
